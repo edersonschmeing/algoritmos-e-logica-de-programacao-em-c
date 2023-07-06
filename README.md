@@ -21,15 +21,15 @@ Este material apresenta os códigos fontes utilizados como exemplo na disciplina
 ### Segundo bimestre
 #### Unidade 03 - Memória
 
- - [9 - Ponteiros]()
- - [10 - Alocação dinâmica de memória]()
- - [11 - Alocação dinâmica de memória  de tipos compostos]()
- - [12 - Ponteiros para arquivos]()
+ - [9 - Ponteiros](https://github.com/edersonschmeing/algoritmos-e-logica-de-programacao-em-c-2023-2/tree/main/ponteiros)
+ - [10 - Alocação dinâmica de memória](https://github.com/edersonschmeing/algoritmos-e-logica-de-programacao-em-c-2023-2/tree/main/alocacao-dinamica-de-memoria)
+ - [11 - Alocação dinâmica de memória  de tipos compostos](https://github.com/edersonschmeing/algoritmos-e-logica-de-programacao-em-c-2023-2/tree/main/alocacao-dinamica-de-memoria-de-tipos-compostos-e-funcoes)
+ - [12 - Ponteiros para arquivos](https://github.com/edersonschmeing/algoritmos-e-logica-de-programacao-em-c-2023-2/tree/main/ponteiros-para-arquivos)
 
 #### Unidade 04 - Algoritmos
 
- - [13 - Ordenação e busca ]()
- - [14 - Recurção]()
- - [15 - Algoritmos recursivos]()
+ - [13 - Ordenação e busca ](https://github.com/edersonschmeing/algoritmos-e-logica-de-programacao-em-c-2023-2/tree/main/ordenacao-e-busca)
+ - [14 - Recursão](https://github.com/edersonschmeing/algoritmos-e-logica-de-programacao-em-c-2023-2/tree/recursao)
+ - [15 - Algoritmos recursivos](https://github.com/edersonschmeing/algoritmos-e-logica-de-programacao-em-c-2023-2/tree/main/algoritmos-recursivos)
  - [16 - Notação assintótica]()
 
