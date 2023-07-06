@@ -6,7 +6,7 @@ Este material apresenta os códigos fontes da disciplina de Algoritmos e Lógica
 ### Primeiro bimestre
 #### Unidade 01 - Introdução a Programação de Computadores
 
- - [1 - Algoritmos e conceitos básicos()
+ - [1 - Algoritmos e conceitos básicos]()
  - [2 - Variáveis e expressões]()
  - [3 - Condicionais]()
  - [4 - Repeticão ]()
