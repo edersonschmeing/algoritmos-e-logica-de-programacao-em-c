@@ -3,7 +3,6 @@
 
 int main(void)
 {
-    // Open CSV file
     FILE *file = fopen("agenda.csv", "a");
     if (!file)
     {
