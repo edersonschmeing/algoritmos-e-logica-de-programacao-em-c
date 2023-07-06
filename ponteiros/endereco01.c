@@ -23,15 +23,17 @@ int main() {
     
     char a = 'A'; 
     int b = 1;
+    double c = 10.0;
 
     printf("&a = %p \n\n", &a);
-    printf("&a = %p \n\n", &b);
+    printf("&b = %p \n\n", &b);
 
-    printf("&a = %p \n\n", refb);
+    printf("&c = %p \n\n", &c);
 
 
     unsigned long tamanho_a = sizeof(a);
     unsigned long tamanho_b = sizeof(b);
+    unsigned long tamanho_c = sizeof(c);
 
     printf("O tamanho da váriavel ( a ) é %ld bytes\n", sizeof(a));   
     printf("O tamanho da váriavel ( a ) é %ld bytes\n\n", tamanho_a);
