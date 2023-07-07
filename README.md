@@ -33,3 +33,56 @@ Este material apresenta os códigos fontes utilizados como exemplo na disciplina
  - [15 - Algoritmos recursivos](https://github.com/edersonschmeing/algoritmos-e-logica-de-programacao-em-c-2023-2/tree/main/algoritmos-recursivos)
  - [16 - Notação assintótica]()
 
+
+### Referências 
+
+BACKES, A. Linguagem C - Completa e Descomplicada. Ed. GEN LTC, 2019.
+
+CORMEN, T. H. et.al. Algoritmos: teoria e prática, 3 edição. Ed. Rio de Janeiro: Elsevier, 2012.
+
+BACKES, A. Algoritmos e Estruturas de Dados em Linguagem C. Ed. GEN LTC, 2023.
+
+<!--
+#### BIBLIOGRAFIA BÁSICA
+
+BACKES, A. Linguagem C - Completa e Descomplicada. Ed. GEN LTC, 2019.
+
+CORMEN, T. H. et.al. Algoritmos: teoria e prática, 3 edição. Ed. Rio de Janeiro: Elsevier, 2012.
+
+BACKES, A. Algoritmos e Estruturas de Dados em Linguagem C. Ed. GEN LTC, 2023.
+
+#### BIBLIOGRAFIA COMPLEMENTAR
+
+PIVA JR, D. et.al. Algoritmos e Programação de Computadores. Ed. GEN LTC, 2019.
+
+FORBELLONE, A. L. V.; EBERSPACHER, H. F. Lógica de programação: a construção de algoritmos e estruturas de dados
+com aplicações em Python. Ed. Pearson GrupoA, 2022.
+
+ASCENCIO, Ana Fernanda Gomes; CAMPOS, Edilene Aparecida Veneruchi de. Fundamentos da programação de
+computadores: algoritmos, PASCAL, C/C++ (padrão ANSI) e JAVA. 3ª edição. Person Universidades, 2012.
+
+MENEZES, C. N. N. Introdução à Programação com Python: Algoritmos e Lógica de Programação Para Iniciantes, 3 edição.
+Ed. Novatec, 2019.
+
+#### BIBLIOGRAFIA APROFUNDAMENTO
+
+C Tutorial. W3Schools.
+https://www.w3schools.com/c/index.php
+
+C Programming Language.
+https://devdocs.io/c/.
+
+Python Tutorial. W3Schools.
+https://www.w3schools.com/python/default.asp
+
+Python Programming Language.
+https://www.python.org/
+
+Programação Descomplicada do professor André Ricardo Backes.
+https://programacaodescomplicada.wordpress.com/indice/linguagem-c/
+
+Playlist. C Virando C do professor Felipe Lousa.
+https://www.youtube.com/watch?v=hPHm98pS4zo&list=PLuARAw3cqFRAUNLs3uyiabGuQceuSTeLS
+
+-->
+
