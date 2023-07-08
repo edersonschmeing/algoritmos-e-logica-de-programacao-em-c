@@ -1,5 +1,5 @@
 ## Algoritmos e Lógica de Programação - 2023-2
-Este material apresenta os códigos fontes com exemplo na disciplina de Algoritmos e Lógica de Programação.
+Este material apresenta exemplos de códigos fontes da disciplina de Algoritmos e Lógica de Programação.
 
 **Professor:** Ederson Schmeing
 
