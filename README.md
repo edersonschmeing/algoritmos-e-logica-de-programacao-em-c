@@ -21,10 +21,10 @@ Este material apresenta os códigos fontes utilizados como exemplo na disciplina
 ### Segundo bimestre
 #### Unidade 03 - Memória
 
- - [9 - Ponteiros](https://github.com/edersonschmeing/algoritmos-e-logica-de-programacao-2023-2/tree/main/8-ponteiros)
- - [10 - Alocação dinâmica de memória](https://github.com/edersonschmeing/algoritmos-e-logica-de-programacao-2023-2/tree/main/9-alocacao-dinamica-de-memoria)
- - [11 - Alocação dinâmica de memória  de tipos compostos](https://github.com/edersonschmeing/algoritmos-e-logica-de-programacao-2023-2/tree/main/10-alocacao-dinamica-de-memoria-de-tipos-compostos-e-funcoes)
- - [12 - Ponteiros para arquivos](https://github.com/edersonschmeing/algoritmos-e-logica-de-programacao-2023-2/tree/main/11-ponteiros-para-arquivos)
+ - [9 - Ponteiros](https://github.com/edersonschmeing/algoritmos-e-logica-de-programacao-2023-2/tree/main/9-ponteiros)
+ - [10 - Alocação dinâmica de memória](https://github.com/edersonschmeing/algoritmos-e-logica-de-programacao-2023-2/tree/main/10-alocacao-dinamica-de-memoria)
+ - [11 - Alocação dinâmica de memória  de tipos compostos](https://github.com/edersonschmeing/algoritmos-e-logica-de-programacao-2023-2/tree/main/11-alocacao-dinamica-de-memoria-de-tipos-compostos-e-funcoes)
+ - [12 - Ponteiros para arquivos](https://github.com/edersonschmeing/algoritmos-e-logica-de-programacao-2023-2/tree/main/12-ponteiros-para-arquivos)
 
 #### Unidade 04 - Algoritmos
 
