@@ -16,7 +16,7 @@ Este material apresenta os códigos fontes utilizados como exemplo na disciplina
  - [5 - Arrays ](https://github.com/edersonschmeing/algoritmos-e-logica-de-programacao-2023-2/tree/main/5-arrays)
  - [6 - Strings](https://github.com/edersonschmeing/algoritmos-e-logica-de-programacao-2023-2/tree/main/6-strings)
  - [7 - Definição de tipos customizados](https://github.com/edersonschmeing/algoritmos-e-logica-de-programacao-2023-2/tree/main/7-definicao-de-tipos-customizados)
- - [8 - Funções](https://github.com/edersonschmeing/algoritmos-e-logica-de-programacao-2023-2/tree/main/funcoes)
+ - [8 - Funções](https://github.com/edersonschmeing/algoritmos-e-logica-de-programacao-2023-2/tree/main/8-funcoes)
 
 ### Segundo bimestre
 #### Unidade 03 - Memória
