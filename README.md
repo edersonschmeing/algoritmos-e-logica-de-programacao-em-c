@@ -28,9 +28,9 @@ Este material apresenta os códigos fontes utilizados como exemplo na disciplina
 
 #### Unidade 04 - Algoritmos
 
- - [13 - Ordenação e busca ](https://github.com/edersonschmeing/algoritmos-e-logica-de-programacao-2023-2/tree/main/12-ordenacao-e-busca)
- - [14 - Recursão](https://github.com/edersonschmeing/algoritmos-e-logica-de-programacao-2023-2/tree/main/13-recursao)
- - [15 - Algoritmos recursivos](https://github.com/edersonschmeing/algoritmos-e-logica-de-programacao-2023-2/tree/main/14-algoritmos-recursivos)
+ - [13 - Ordenação e busca ](https://github.com/edersonschmeing/algoritmos-e-logica-de-programacao-2023-2/tree/main/13-ordenacao-e-busca)
+ - [14 - Recursão](https://github.com/edersonschmeing/algoritmos-e-logica-de-programacao-2023-2/tree/main/14-recursao)
+ - [15 - Algoritmos recursivos](https://github.com/edersonschmeing/algoritmos-e-logica-de-programacao-2023-2/tree/main/15-algoritmos-recursivos)
  - [16 - Notação assintótica](https://github.com/edersonschmeing/algoritmos-e-logica-de-programacao-2023-2/tree/main/16-notacao-assintotica)
 
 
