@@ -36,7 +36,7 @@ Este material apresenta exemplos de códigos fontes da disciplina de Algoritmos 
 
 ### Referências 
 
-BACKES, A. Linguagem C - Completa e Descomplicada. Ed. GEN LTC, 2019.
+BACKES, A. Linguagem C - Completa e Descomplicada. 2 Ed. - [Reimpr.]. - Rio de Janeiro: LTC, 2023 - 4° Impressão.
 
 CORMEN, T. H. et.al. Algoritmos: teoria e prática, 3 edição. Ed. Rio de Janeiro: Elsevier, 2012.
 
