@@ -42,6 +42,7 @@ CORMEN, T. H. et.al. Algoritmos: teoria e prática, 3 edição. Ed. Rio de Janei
 
 BACKES, A. Algoritmos e Estruturas de Dados em Linguagem C. Ed. GEN LTC, 2023.
 
+<!--
 FORBELLONE, A. L. V.; EBERSPACHER, H. F. Lógica de programação: a construção de algoritmos e estruturas de dados
 com aplicações em Python. Ed. Pearson GrupoA, 2022.
 
@@ -62,4 +63,4 @@ https://www.w3schools.com/c/index.php
 
 Python Tutorial. W3Schools.
 https://www.w3schools.com/python/default.asp
-
+-->
