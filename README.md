@@ -36,18 +36,17 @@ Este material apresenta exemplos de códigos fontes da disciplina de Algoritmos 
 
 ### Referências 
 
-BACKES, A. Linguagem C - Completa e Descomplicada. 2 Ed. - [Reimpr.]. - Rio de Janeiro: LTC, 2023 - 4° Impressão.
+BACKES, A. Linguagem C - Completa e Descomplicada. 2 Ed. - Rio de Janeiro: Elsevier, 2019.
 
 CORMEN, T. H. et.al. Algoritmos: teoria e prática, 3 edição. Ed. Rio de Janeiro: Elsevier, 2012.
 
-BACKES, A. Algoritmos e Estruturas de Dados em Linguagem C. Ed. GEN LTC, 2023.
+BACKES, A. Algoritmos e Estruturas de Dados em Linguagem C. 1. Ed. - Rio de Janeiro: LTC, 2023.
 
-<!--
 FORBELLONE, A. L. V.; EBERSPACHER, H. F. Lógica de programação: a construção de algoritmos e estruturas de dados
-com aplicações em Python. Ed. Pearson GrupoA, 2022.
+com aplicações em Python. 4. Ed. Pearson GrupoA, 2022.
 
-MENEZES, C. N. N. Introdução à Programação com Python: Algoritmos e Lógica de Programação Para Iniciantes, 3 edição.
-Ed. Novatec, 2019.
+MENEZES, C. N. N. Introdução à Programação com Python: Algoritmos e Lógica de Programação Para Iniciantes, 3. Ed.
+Novatec, 2019.
 
 C Programming Language.
 https://devdocs.io/c/.
@@ -55,12 +54,8 @@ https://devdocs.io/c/.
 Python Programming Language.
 https://www.python.org/
 
-Rust Programming Language.
-https://www.rust-lang.org/
-
 C Tutorial. W3Schools.
 https://www.w3schools.com/c/index.php
 
 Python Tutorial. W3Schools.
 https://www.w3schools.com/python/default.asp
--->
