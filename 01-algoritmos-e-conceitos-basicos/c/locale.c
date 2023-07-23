@@ -15,3 +15,5 @@ int main (void) {
 
 //executar o camando abaixo na prompt do windows, caso não funcione
 //chcp 65001
+
+//https://learn.microsoft.com/en-us/windows/win32/intl/code-page-identifiers?redirectedfrom=MSDN
