@@ -1,8 +1,10 @@
 #include <stdio.h>
 
 int main() { 
+    
     float media = 7, frequencia_minima = 0.75f;
     float media_aluno = 6, frequencia = 0.76f;
+    
     if (media_aluno >= media && frequencia > frequencia_minima)
         printf("Você foi aprovado!\n");
     else if (media_aluno >= media)
