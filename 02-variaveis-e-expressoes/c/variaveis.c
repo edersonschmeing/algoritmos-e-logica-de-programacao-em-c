@@ -1,4 +1,14 @@
+#include <stdio.h>
+#include <stdlib.h>
+
 int main() {
+    
+    //Este é um comentário. 
+
+    /* 
+      Este é um comentário 
+      em mais linhas. 
+    */
     
     char a = '0';
     short b = 1;
@@ -9,19 +19,21 @@ int main() {
     printf("a = %c\n", a);
     printf("b = %d\n", b);
     printf("c = %d\n", c);
-    printf("d = %d\n", d);
+    printf("d = %ld\n", d);
     printf("e = %lf\n\n", e);
 
     return 0;
 }
 
-
 /*
 prinft
-%c -> caracter simples (char)
+%c -> caracter simples (CHAR)
 %d -> decimal (INT)
-%ld -> inteiro “longo” (long int)
-%f -> ponto flutuante (float)
-%s -> cadeia de caracteres (string)
+%ld -> inteiro “longo” (LONG INT)
+%f -> ponto flutuante (FLOAT)
+%o -> octal
+%s -> cadeia de caracteres (STRING)
+%x -> hexadecimal
 %lf -> double
 */
+
