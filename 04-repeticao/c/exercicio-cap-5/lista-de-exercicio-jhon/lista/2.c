@@ -6,7 +6,7 @@ os números naturais de 0 até N em ordem decrescente.*/
 
 int main() {
 
-int n;
+    int n;
 
     printf("Digite um numero inteiro: ");
     scanf(" %d", &n);
