@@ -10,7 +10,7 @@ int main() {
 
     printf("\nDigite 10 numeros inteiros: \n");
 
-        while(cont <= 5) {
+        while(cont <= 10) {
 
             printf("\nDigite o valor %d: ", cont);
             scanf(" %f", &num);
