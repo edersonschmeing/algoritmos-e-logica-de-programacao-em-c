@@ -1,5 +1,5 @@
 colocar nesta pasta os arquivos o nome do monitor
-por exemplo mateus_pepice e dentro os arquivos .c com a soluçao dos exercícios do capítulo 6.
+por exemplo mateus_pepice e dentro os arquivos .c com a soluçao dos exercícios do capítulo 7.
 
 nome do arquivo deve ser o número do exercício 
 
