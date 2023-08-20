@@ -1,0 +1,9 @@
+colocar nesta pasta os arquivos .c com a soluçao dos exercícios do capítulo 6.
+nome do arquivo.
+
+1.c
+2.c 
+3.c
+.
+.
+.
