@@ -1,28 +1,11 @@
 #include <stdio.h>
 
 /*
-1) Faça um programa que leia um número inteiro positivo N e 
-imprima todos os números naturais de 0 até N em ordem crescente. 
+Faça um programa que leia uma matriz de tamanho 3 × 3. Imprima na tela
+o menor valor contido nessa matriz.
 */
 
 int main(){
-    int n;
-
-    printf("Informe um número inteiro N: ");
-    scanf("%d", &n);
-    
-    printf("\nDeclaração da variável (i) na estrutura do (for).\n");
-    for(int i = 0; i <= n; i++){
-        printf("%d ", i);
-    }
-    
-    printf("\nDeclaração da variável (i) fora da estrutura do (for).\n");
-    int i; 
-    for(i = 0; i <= n; i++){
-        printf("%d ", i);
-    }
-    
-    printf("\n");
-    
+    printf("Matriz 3x3");
     return 0;
 }
