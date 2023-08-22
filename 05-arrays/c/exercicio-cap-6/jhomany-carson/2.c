@@ -1,5 +1,5 @@
-/*1) Crie um programa que leia do teclado seis valores 
-inteiros e em seguida mostre na tela os valores lidos.*/
+/*2) Crie um programa que leia do teclado seis valores inteiros e em seguida mostre na tela os valores lidos
+na ordem inversa.*/
 
 #include <stdio.h>
 
@@ -15,7 +15,7 @@ int main(){
 
     printf("\nCerto, os valores lidos foram: \n\n");
 
-    for (int i = 0; i < 6; i++) {
+    for (int i = 5; i >= 0; i--) {
 
         printf("\nO valor %d eh: %d", i+1, valor[i]);
     }
