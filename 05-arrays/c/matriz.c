@@ -44,7 +44,7 @@ int main(){
 			
 			// f. Soma dos elementos abaixo da diagonal secundária;
 			if (j >= COLUNA-i) f_soma = f_soma + m[i][j];
-		}
+				}
 	}
 
 	printf("\n\n  Matriz \n\n");
