@@ -2,12 +2,13 @@
 #include <stdlib.h>
 #include <math.h>
 
-
 #define L 3
 #define C 3
 
 int main(){
+	
 	int i, j, m[L][C], a_soma = 0, b_soma = 0, c_soma = 0, d_soma = 0, e_soma = 0, f_soma = 0;
+	
 	printf("Preencha os dados da Matriz %d X %d\n", L, C);
 	for(i=0; i < L; i++){
 		for (j=0; j < C; j++){
@@ -15,6 +16,7 @@ int main(){
 			scanf("%d", &m[i][j]);
 		}
 	}
+
 	for(i=0; i < L; i++) {
 		for (j = 0; j < C; j++){
 			// a. Soma dos elementos da diagonal principal;
