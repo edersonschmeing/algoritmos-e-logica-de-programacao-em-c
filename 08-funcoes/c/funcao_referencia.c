@@ -5,7 +5,7 @@
 //void troca(const int *valor_x, int *valor_y) { a palavra reservada const indica que a variável e somente de leitura.
 void troca(int *valor_x, int *valor_y) {
    
-    int valor_a;
+    int valor_a = 0;
     
     printf("### DENTRO DA FUNÇÃO ### \n");
     printf("&valor_x = %p | valor_x = %p | *valor_x = %d\n", &valor_x, valor_x, *valor_x);
@@ -22,8 +22,10 @@ void troca(int *valor_x, int *valor_y) {
 int main() {
     
     /*
-    Funções são blocos de instruções(códigos) que pode ser nomeadas e chamadas em qualquer parte de um programa.
-    Toda função tem um nome, um tipo que determina seu valor de retorno e pode ter ou não ter parâmetros. 
+    Funções são blocos de instruções(códigos) que pode ser nomeadas e 
+    chamadas em qualquer parte de um programa.
+    Toda função tem um nome, um tipo que determina seu valor de retorno e 
+    pode ter ou não ter parâmetros. 
     Também não pode declarar uma função dentro de outra função.    
     */
 

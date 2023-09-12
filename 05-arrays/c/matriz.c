@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include <math.h>
 
-
 #define LINHA 3
 #define COLUNA 3
 
