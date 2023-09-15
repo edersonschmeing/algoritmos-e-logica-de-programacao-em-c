@@ -5,7 +5,6 @@ Este material apresenta exemplos de códigos fontes da disciplina de Algoritmos 
 
 **Professor:** Ederson Schmeing
 
-### Primeiro bimestre
 #### Unidade 01 - Introdução a Programação de Computadores
 
  - [01 - Algoritmos e conceitos básicos](https://github.com/edersonschmeing/algoritmos-e-logica-de-programacao-2023-2/tree/main/01-algoritmos-e-conceitos-basicos)
@@ -20,7 +19,6 @@ Este material apresenta exemplos de códigos fontes da disciplina de Algoritmos 
  - [07 - Definição de tipos customizados](https://github.com/edersonschmeing/algoritmos-e-logica-de-programacao-2023-2/tree/main/07-definicao-de-tipos-customizados)
  - [08 - Funções](https://github.com/edersonschmeing/algoritmos-e-logica-de-programacao-2023-2/tree/main/08-funcoes)
 
-### Segundo bimestre
 #### Unidade 03 - Memória
 
  - [09 - Ponteiros](https://github.com/edersonschmeing/algoritmos-e-logica-de-programacao-2023-2/tree/main/09-ponteiros)
