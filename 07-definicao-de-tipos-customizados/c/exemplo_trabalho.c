@@ -1,117 +1,151 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdbool.h>
-
            
-   struct disciplina {
-        int notas[4];
-        char descricao[4];  
-   };  
+struct disciplina {
+      int notas[4];
+      char descricao[4];  
+};  
 
+struct endereco {
+      char rua[30];
+      int numero;  
+};  
 
-   struct endereco {
-        char rua[30];
-        int numero;  
-   };  
+typedef struct endereco Endereco; 
+   
+typedef struct aluno {
+      int idade;
+      int ra;
+      /* char nome[30];
+      struct endereco endereco1;
+      Endereco endereco2;
+      struct disciplina disc; */
+} Aluno;  
 
-   typedef struct endereco Endereco; 
-      
-   typedef struct aluno {
-        int idade;
-        int ra;
-       /* char nome[30];
-        struct endereco endereco1;
-        Endereco endereco2;
-        int notas[4];
-        char disciplinas[4]; */
-   } Aluno;  
+#define tamanho_maxino 5
 
-   typedef struct tads {
-      Aluno alunos[3];
-      int tamanho;
-   } TADS;  
+typedef struct tads {
+   //Aluno alunos[tamanho_maxino]; funciona somente nas versões mais novas do C 
+   Aluno alunos[5];
+   int tamanho;
+} TADS;  
 
 
 void imprimir(TADS *tads) {
    
-   printf("\nRelatorio dos alunos de TADS\n");
+   printf("\nRelatorio dos alunos de TADS - %d \n", tads->tamanho);
 
    int i;
    for (i = 0; i < tads->tamanho; i++) {    
-      printf("\nAluno: %d\n", i);  
-      printf("%d \n", tads->alunos[i].ra);
-      printf("%d \n", tads->alunos[i].idade);
+      printf("\nAluno[%d]\n", i);  
+      printf("ra: %d \n", tads->alunos[i].ra);
+      printf("idade: %d \n", tads->alunos[i].idade);
    }
 
 }
 
- bool esta_cheio(TADS *tads) {  
-      return tads->tamanho == 3;
- }
-
-bool existe(TADS *tads, int ra) {
+int buscar(TADS *tads, int ra) {
+   
    int i;
    for (i = 0; i < tads->tamanho; i++) {      
       if (tads->alunos[i].ra == ra)
-         return true;
+         return i;
    }
-   return false;
+   return -1;      
+} 
+
+bool verificar_tamanho(TADS *tads) {  
+
+   return (tads->tamanho == tamanho_maxino);
+}
+
+bool verificar_existe(TADS *tads, int ra) {
+
+   return (buscar(tads,ra) > -1);  
 } 
  
 bool adicionar(TADS *tads, Aluno aluno) {
 
-   if (esta_cheio(tads)) 
+   if (verificar_tamanho(tads)) 
       return false;
    
-   if (existe(tads, aluno.ra)) 
+   if (verificar_existe(tads, aluno.ra)) 
       return false; 
 
    tads->alunos[tads->tamanho++] = aluno;
+   //tads->alunos[tads->tamanho] = aluno;
    //tads->tamanho++; 
 
    return true;
 }
 
-bool excluir(TADS *tads) {
+bool excluir(TADS *tads, int ra) {
    
-   tads->tamanho--;
-   return true; 
+   int i =  buscar(tads, ra);
+   if (i > -1) {
+      tads->alunos[i] = tads->alunos[tads->tamanho-1];
+      tads->alunos[tads->tamanho].ra = -1;
+      tads->tamanho--;
+      return true;
+   } else 
+      return false; 
+
 }
 
-void teste(TADS *tads) {
+void ordenar_insertion_sort(TADS *tads){
+
+    printf("\nOrdenando alunos de TADS - %d \n", tads->tamanho);
+    Aluno *v = tads->alunos, aluno;
+    int n = tads->tamanho;
+    int i, j;
+    for(i = 1; i < n ; i++){
+        aluno = v[i];
+        for(j=i; (j>0) && (aluno.ra < v[j-1].ra); j--)
+            v[j] = v[j - 1];
+        v[j] = aluno;
+    }
+}
+
+void testar(TADS *tads) {
    
    Aluno a1, a2, a3, a4;
 
-   a1.ra = 11;
-   a1.idade = 33;
-   adicionar(tads, a1);
    imprimir(tads);
 
+   a1.ra = 99;
+   a1.idade = 33;
+   adicionar(tads, a1);
+   
    a2.ra = 16;
    a2.idade = 25;
    adicionar(tads, a2);
-   imprimir(tads);
-
-   a3.ra = 16;
+   
+   a3.ra = 19;
    a3.idade = 29;
    adicionar(tads, a3);
-   imprimir(tads);
-
-
-   a4.ra = 19;
+   
+   a4.ra = 100;
    a4.idade = 18;
    adicionar(tads, a4);
+
+   imprimir(tads);
+ 
+   excluir(tads, a2.ra);
+   imprimir(tads);
+
+   ordenar_insertion_sort(tads);
+
    imprimir(tads);
 
 }
-
 
 int main() {
    
    TADS tads;
    tads.tamanho = 0;
 
-   teste(&tads); 
+   testar(&tads); 
  
    return 0;
 }
