@@ -107,6 +107,56 @@ void ordenar_insertion_sort(TADS *tads){
     }
 }
 
+
+void iniciar_menu( TADS *tads) {
+
+   printf("\n--- CONSTRUIR UM MENU COM AS OPERAÇÕES ---\n\n");
+  
+   int operacao = 1;
+  
+   while (operacao < 5 && operacao > 0) {
+      
+      printf("---------------------------------------\n");
+      printf("        MENU DE OPERAÇÕES              \n");
+      printf("---------------------------------------\n");
+      printf("1 - Operação 1 \n");
+      printf("2 - Operação 2 \n");
+      printf("3 - Operação 3 \n");
+      printf("4 - Relatório \n");
+      printf("5 - Sair\n");
+      printf("---------------------------------------\n");
+      printf("Escolha uma operação:  ");
+     
+      int numero_parametros = (scanf("%d", &operacao)); // retornam o número de conversões realizada com sucesso. 
+      if (numero_parametros != 1) {
+         printf("Problemas na entrada de dados");
+      }   
+            
+      switch (operacao)       {
+      case 1:
+         printf("Você escolheu a operação %d\n", operacao);
+         //chamar função
+         break;
+      case 2:
+         printf("Você escolheu a operação %d\n", operacao);
+         break;
+      case 3:
+         printf("Você escolheu a operação %d\n", operacao);
+         break;
+      case 4:
+         printf("Você escolheu a operação %d\n", operacao);
+         imprimir(tads);
+         break;
+      case 5:
+         printf("Você escolheu sair do menu. Operação %d\n", operacao);
+         break;   
+      default:
+         printf("Você escolheu opção default. Operação %d\n", operacao);
+         break;
+      }         
+   }
+}
+
 void testar(TADS *tads) {
    
    Aluno a1, a2, a3, a4;
@@ -146,6 +196,8 @@ int main() {
    tads.tamanho = 0;
 
    testar(&tads); 
+
+   iniciar_menu(&tads);
  
    return 0;
 }
