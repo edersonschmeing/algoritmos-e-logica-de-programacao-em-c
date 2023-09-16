@@ -45,6 +45,7 @@ void imprimir(TADS *tads) {
 
 }
 
+
 int buscar(TADS *tads, int ra) {
    
    int i;
@@ -54,6 +55,16 @@ int buscar(TADS *tads, int ra) {
    }
    return -1;      
 } 
+
+bool buscar_por_ra(TADS *tads, int ra, Aluno *aluno) {
+   
+   int i = buscar(tads, ra);
+   if (i > -1) {
+      *aluno = tads->alunos[i];
+      return true;
+   }
+   return false;
+}
 
 bool verificar_tamanho(TADS *tads) {  
 
