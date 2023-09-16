@@ -26,8 +26,8 @@ typedef struct aluno {
 #define tamanho_maxino 5
 
 typedef struct tads {
-   //Aluno alunos[tamanho_maxino]; funciona somente nas versões mais novas do C 
-   Aluno alunos[5];
+   Aluno alunos[tamanho_maxino]; //funciona somente apartir do c99 gcc -std=c99 exemplo_trabalho.c
+   //Aluno alunos[5];
    int tamanho;
 } TADS;  
 
