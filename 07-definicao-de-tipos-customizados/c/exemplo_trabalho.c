@@ -3,7 +3,7 @@
 #include <stdbool.h>
            
 struct disciplina {
-      int notas;
+      int nota;
       char descricao[20];  
 };  
 
