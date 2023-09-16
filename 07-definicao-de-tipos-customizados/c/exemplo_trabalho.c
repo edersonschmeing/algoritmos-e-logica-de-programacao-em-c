@@ -3,8 +3,8 @@
 #include <stdbool.h>
            
 struct disciplina {
-      int notas[4];
-      char descricao[4];  
+      int notas;
+      char descricao[20];  
 };  
 
 struct endereco {
@@ -20,7 +20,7 @@ typedef struct aluno {
       /* char nome[30];
       struct endereco endereco1;
       Endereco endereco2;
-      struct disciplina disc; */
+      struct disciplina disc[4]; */
 } Aluno;  
 
 #define tamanho_maxino 5
