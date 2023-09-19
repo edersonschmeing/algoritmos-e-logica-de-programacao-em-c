@@ -2,26 +2,35 @@
 #include <stdlib.h>
 #include <math.h>
 
-
-#define L 3
-#define C 3
+#define LINHA 3
+#define COLUNA 3
 
 int main(){
-	int i, j, m[L][C], a_soma = 0, b_soma = 0, c_soma = 0, d_soma = 0, e_soma = 0, f_soma = 0;
-	printf("Preencha os dados da Matriz %d X %d\n", L, C);
-	for(i=0; i < L; i++){
-		for (j=0; j < C; j++){
+	int i, j; 
+	int m[LINHA][COLUNA]; 
+	int a_soma = 0; 
+	int b_soma = 0; 
+	int c_soma = 0; 
+	int d_soma = 0; 
+	int e_soma = 0; 
+	int f_soma = 0;
+	
+	printf("Preencha os dados da Matriz %d X %d\n", LINHA, COLUNA);
+	for(i=0; i < LINHA; i++){
+		for (j=0; j < COLUNA; j++){
 			printf("\nDigite os valores para M[%d][%d]\n", i, j);
 			scanf("%d", &m[i][j]);
 		}
 	}
-	for(i=0; i < L; i++) {
-		for (j = 0; j < C; j++){
+
+	for(i=0; i < LINHA; i++) {
+		for (j = 0; j < COLUNA; j++){
+		
 			// a. Soma dos elementos da diagonal principal;
 			(i == j) ? a_soma += m[i][j] : 0;
 			
 			// b. Soma dos elementos da diagonal secundária;
-			if (j == C - i - 1) b_soma = b_soma + m[i][j];
+			if (j == COLUNA - i - 1) b_soma = b_soma + m[i][j];
 			
 			// c. Soma dos elementos acima da diagonal principal;
 			if (j > i) c_soma += m[i][j];
@@ -30,19 +39,18 @@ int main(){
 			(j < i) ? d_soma = d_soma + m[i][j] : 0;
 			
 			// e. Soma dos elementos acima da diagonal secundária;
-			(j <= C-i-2) ? e_soma += m[i][j] : 0;
+			(j <= COLUNA - i - 2) ? e_soma += m[i][j] : 0;
 			
 			// f. Soma dos elementos abaixo da diagonal secundária;
-			if (j >= C-i) f_soma = f_soma + m[i][j];
-		
-		}
+			if (j >= COLUNA-i) f_soma = f_soma + m[i][j];
+				}
 	}
 
 	printf("\n\n  Matriz \n\n");
 
-	for(i=0; i < L; i++) {
+	for(i=0; i < LINHA; i++) {
 		printf("  %i\t[ ", i);
-		for (j=0; j < C; j++) {
+		for (j=0; j < COLUNA; j++) {
 			printf("%i ", m[i][j]);
 		}
 		printf("]\n");

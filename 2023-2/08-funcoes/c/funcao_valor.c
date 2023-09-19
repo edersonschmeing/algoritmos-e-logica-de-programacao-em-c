@@ -3,6 +3,7 @@
 //Exemplo de funções com passagem de parâmetros por valor 
 
 int soma_escalar(int valor_x, int valor_y) {
+  
     int soma = valor_x + valor_y;
      
     printf("--- DENTRO DA FUNÇÃO --- \n");

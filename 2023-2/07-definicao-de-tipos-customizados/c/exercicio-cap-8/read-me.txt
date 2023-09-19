@@ -1,0 +1,11 @@
+colocar nesta pasta os arquivos o nome do monitor
+por exemplo mateus_pepice e dentro os arquivos .c com a soluçao dos exercícios do capítulo 8.
+
+nome do arquivo deve ser o número do exercício 
+
+1.c
+2.c 
+3.c
+.
+.
+.
