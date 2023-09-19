@@ -26,7 +26,7 @@ typedef struct aluno {
 #define tamanho_maxino 5
 
 typedef struct tads {
-   Aluno alunos[tamanho_maxino]; // gcc -std=c99 exemplo_trabalho.c
+   Aluno alunos[tamanho_maxino];  //exemplo_trabalho.c
    //Aluno alunos[5];
    int tamanho;
 } TADS;  
@@ -37,6 +37,7 @@ void imprimir(TADS *tads) {
    printf("\nRelatorio dos alunos de TADS - %d \n", tads->tamanho);
 
    int i;
+   //for (i = 0; i < (*tads).tamanho; i++) {    
    for (i = 0; i < tads->tamanho; i++) {    
       printf("\nAluno[%d]\n", i);  
       printf("ra: %d \n", tads->alunos[i].ra);
@@ -73,7 +74,7 @@ bool verificar_tamanho(TADS *tads) {
 
 bool verificar_existe(TADS *tads, int ra) {
 
-   return (buscar(tads,ra) > -1);  
+   return (buscar(tads, ra) > -1);  
 } 
  
 bool adicionar(TADS *tads, Aluno aluno) {
@@ -178,7 +179,7 @@ void testar(TADS *tads) {
    a1.idade = 33;
    adicionar(tads, a1);
    
-   a2.ra = 16;
+   a2.ra = 88;
    a2.idade = 25;
    adicionar(tads, a2);
    
