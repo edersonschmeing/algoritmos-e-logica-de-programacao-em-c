@@ -26,7 +26,7 @@ typedef struct aluno {
 #define tamanho_maxino 5
 
 typedef struct tads {
-   Aluno alunos[tamanho_maxino];  //exemplo_trabalho.c
+   Aluno alunos[tamanho_maxino];  
    //Aluno alunos[5];
    int tamanho;
 } TADS;  
