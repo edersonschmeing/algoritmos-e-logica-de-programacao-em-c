@@ -15,12 +15,21 @@ int main() {
     int c = 3;
     long d = 4; 
     double e = 5.;
-
+    
+    struct x {
+      int i;
+      float j;
+      short xx;
+    };
+    
     printf("a = %c\n", a);
     printf("b = %d\n", b);
     printf("c = %d\n", c);
     printf("d = %ld\n", d);
     printf("e = %lf\n\n", e);
+
+    printf("e = %ld\n\n", sizeof(struct x));
+
 
     return 0;
 }
