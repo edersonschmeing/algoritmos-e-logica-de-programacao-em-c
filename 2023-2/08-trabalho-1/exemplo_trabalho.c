@@ -122,10 +122,12 @@ void ordenar_insertion_sort(TADS *tads){
 
 void iniciar_menu( TADS *tads) {
 
-/*
+/* para colocar cor no console. 
+   #include <conio.h> usar no windows 
+    
+    \e[1;31m
     \033[1;31m
-    \033[1;0m is used to reset the color back to normal. All text after this will not be colored.
-The different colors are as follows:
+    \033[1;0m 
 
     Black: 30
     Red: 31
