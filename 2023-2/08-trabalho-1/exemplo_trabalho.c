@@ -122,22 +122,43 @@ void ordenar_insertion_sort(TADS *tads){
 
 void iniciar_menu( TADS *tads) {
 
+/*
+    \033[1;31m
+    \033[1;0m is used to reset the color back to normal. All text after this will not be colored.
+The different colors are as follows:
+
+    Black: 30
+    Red: 31
+    Green: 32
+    Yellow: 33
+    Blue: 34
+    Magenta: 35
+    Cyan: 36
+    White: 37
+    Reset: 0
+*/
+
+   char cor_vermelha[10]= "\033[1;31m";
+   char cor_azul[10] = "\033[1;34m";
+   char cor_verde[10] = "\033[1;32m";
+   char reset_cor[10] = "\033[1;0m";
+
    printf("\n--- CONSTRUIR UM MENU COM AS OPERAÇÕES ---\n\n");
   
    int operacao = 1;
   
    while (operacao < 5 && operacao > 0) {
       
-      printf("---------------------------------------\n");
+      printf("%s---------------------------------------%s\n", cor_azul, cor_azul);
       printf("        MENU DE OPERAÇÕES              \n");
       printf("---------------------------------------\n");
-      printf("1 - Operação 1 \n");
-      printf("2 - Operação 2 \n");
-      printf("3 - Operação 3 \n");
-      printf("4 - Relatório \n");
-      printf("5 - Sair\n");
+      printf("%s1 - Operação 1 %s \n", cor_verde, cor_verde);
+      printf("%s2 - Operação 2 %s \n", cor_verde, cor_verde);
+      printf("%s3 - Operação 3 %s \n", cor_verde, cor_verde);
+      printf("%s4 - Relatório  %s \n", cor_verde, cor_verde);
+      printf("%s5 - Sair %s \n ", cor_vermelha, cor_vermelha);
       printf("---------------------------------------\n");
-      printf("Escolha uma operação:  ");
+      printf("%sEscolha uma operação:%s%s   ", cor_azul, cor_azul, reset_cor);
      
       int numero_parametros = (scanf("%d", &operacao)); // retornam o número de conversões realizada com sucesso. 
       if (numero_parametros != 1) {
