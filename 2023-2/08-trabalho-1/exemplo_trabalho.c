@@ -122,7 +122,7 @@ void ordenar_insertion_sort(TADS *tads){
 
 void iniciar_menu( TADS *tads) {
 
-/* para colocar cor no console. 
+/* para colocar cor no console 
    #include <conio.h> usar no windows 
     
     \e[1;31m
