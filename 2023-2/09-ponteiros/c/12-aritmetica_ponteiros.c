@@ -24,7 +24,7 @@ int main() {
 
     // retorna 4 bytes por que é um ponteiro para int.
     p--;  
-    // %ld formata em decimal 
+    // %ld formata em decimal longo 
     printf("&p = %p | p = %p | p = %ld | *p = %d \n", &p, p, p, *p);
 
     // avança 4 bytes por que é um ponteiro para int

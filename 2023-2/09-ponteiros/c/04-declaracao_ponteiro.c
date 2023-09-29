@@ -14,6 +14,7 @@ As variáveis do tipo ponteiro ocupa 8 bytes, idependente do tipo.
 
 
 int main() {
+    
     int *p = NULL;
     
     if (p == NULL) {
