@@ -1,17 +1,17 @@
 #include <stdio.h>
-#include <stdlib.h>  // contém o NULL, calloc, malloc, free
+#include <stdlib.h>  // contém as funções o NULL, calloc, malloc, free
 
 
 int main() {
 
     /*
     Alocação estática de memória.    
-    Toda varável e alocada na memória Stack. 
-    O espaço para as variáveis é alocado no início da execução e cada variável recebe um endereço de memória que 
+    Toda varável e alocada na memória STACK(pilha). 
+    O espaço para as variáveis em definico tempo de compilação é alocado no início da execução e cada variável recebe um endereço de memória que 
     se mantém até o final da execução quando o sistema operacional desaloca automaticamente. 
   
     Alocação dinâmica de memória
-    E feita na memória Heap. 
+    E feita na memória HEAP(monte). 
     Alocação dinâmica de memória é o processo que aloca memória em tempo de execução.
     É utilizada quando não se sabe previamente o quanto de memória será necessário para armazenar os dados. 
     Conseguimos determinar o tamanho de memória a ser usado conforme a necessidade, evitando uso desnecessário de memória.           
