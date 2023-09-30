@@ -45,9 +45,6 @@ BACKES, A. Algoritmos e Estruturas de Dados em Linguagem C. 1. Ed. - Rio de Jane
 FORBELLONE, A. L. V.; EBERSPACHER, H. F. Lógica de programação: a construção de algoritmos e estruturas de dados
 com aplicações em Python. 4. Ed. Pearson GrupoA, 2022.
 
-MENEZES, C. N. N. Introdução à Programação com Python: Algoritmos e Lógica de Programação Para Iniciantes, 3. Ed.
-Novatec, 2019.
-
 Programação Descomplicada
 https://www.andrebackes.com/
 
