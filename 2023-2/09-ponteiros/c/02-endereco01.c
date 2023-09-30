@@ -54,6 +54,8 @@ prinft
 %s -> cadeia de caracteres (STRING)
 %x -> hexadecimal
 %lf -> double
+%p -> ponteiro
+
 */
 
 

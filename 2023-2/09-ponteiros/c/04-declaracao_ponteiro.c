@@ -21,7 +21,7 @@ int main() {
         printf("boa prática e inicializar os ponteiros.\n\n");
 
     } 
-    printf("&p = %p || p = %p \n\n", &p, p);
+    printf("&p = %p || p = %p \n\n", &p, p);    
     
     // o ponteiro recebendo um enderço qualquer de memória.
     p = 0x7ffd5e9698c1; 
