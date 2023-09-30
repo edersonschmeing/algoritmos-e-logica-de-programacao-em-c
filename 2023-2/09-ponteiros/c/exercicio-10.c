@@ -12,7 +12,6 @@ O ponteiro d deve ser usado para calcular quádruplo.
 
 #include <stdio.h>
 
-
 int main() {
    
    int a, *b, **c, ***d;
@@ -32,6 +31,6 @@ int main() {
   ***d = (a / 3) * 4;
   //***c = (**c / 3) * 4;
   printf("\n%d \n", a);
-  
+
     return 0;
 }
