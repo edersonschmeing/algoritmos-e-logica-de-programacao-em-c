@@ -48,6 +48,9 @@ com aplicações em Python. 4. Ed. Pearson GrupoA, 2022.
 MENEZES, C. N. N. Introdução à Programação com Python: Algoritmos e Lógica de Programação Para Iniciantes, 3. Ed.
 Novatec, 2019.
 
+Programação Descomplicada
+https://www.andrebackes.com/
+
 C Programming Language.
 https://devdocs.io/c/.
 
