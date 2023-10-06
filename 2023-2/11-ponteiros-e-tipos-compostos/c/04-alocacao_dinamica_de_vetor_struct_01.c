@@ -10,7 +10,7 @@ int main() {
    } Pessoa;  
  
 
-   printf(" --- ALOCAÇÃO DINÂMICA DE PONTEIRO DE PONTEIRO DE STRUCT--- \n");
+   printf(" --- ALOCAÇÃO DINÂMICA (HEAP) - PONTEIRO DE PONTEIRO DE STRUCT--- \n");
     
    Pessoa *pessoa_dinamica = (Pessoa*) malloc(1 * sizeof(Pessoa));
    Pessoa *pessoa_dinamica1 = (Pessoa*) malloc(1 * sizeof(Pessoa));

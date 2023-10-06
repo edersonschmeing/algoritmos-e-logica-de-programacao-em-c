@@ -18,13 +18,13 @@ int main() {
    */ 
     
     //alocação estática na (memória Stack). 
-    printf(" --- ALOCAÇÃO ESTÁTICA --- \n");
+    printf(" --- ALOCAÇÃO ESTÁTICA (STACK) --- \n");
     int a = 30; 
     printf("&a = %p, a = %d \n\n", &a, a);
 
 
     //alocação dinâmica na (memória Heap) com funçõa malloc
-    printf(" --- ALOCAÇÃO DINÂMICA USANDO FUNÇÃO (malloc) --- \n");
+    printf(" --- ALOCAÇÃO DINÂMICA (HEAP) USANDO FUNÇÃO (malloc) --- \n");
     int *b = malloc(100 * sizeof(int)); // malloc não incializa o espaço alocado. Todos os elementos possuem lixo de memória.
     *b = 20; 
     printf("&b = %p | b = %p | *b = %d \n", &b, b, *b);
@@ -35,7 +35,7 @@ int main() {
 
 
      //alocação dinâmica na (memória Heap) com função calloc
-    printf(" --- ALOCAÇÃO DINÂMICA USANDO FUNÇÃO (calloc) --- \n" );
+    printf(" --- ALOCAÇÃO DINÂMICA (HEAP) USANDO FUNÇÃO (calloc) --- \n" );
     int *c = calloc(1, sizeof(int)); // calloc incializa o espaço alocado.
     *c = 50; 
     printf("&c = %p | c = %p | *c = %d \n", &c, c, *c);

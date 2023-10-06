@@ -9,7 +9,7 @@ int main() {
         int idade;
    } Pessoa;  
     
-   printf(" --- ALOCAÇÃO ESTÁTICA DE STRUCT --- \n");
+   printf(" --- ALOCAÇÃO ESTÁTICA DE STRUCT (HEAP) --- \n");
    Pessoa pessoa_estatica; 
 
    strcpy(pessoa_estatica.nome, "Ederson Schmeing");
@@ -19,7 +19,7 @@ int main() {
    printf("Idade: %d \n\n", pessoa_estatica.idade);
 
 
-   printf(" --- ALOCAÇÃO DINÂMICA DE STRUCT --- \n");
+   printf(" --- ALOCAÇÃO DINÂMICA DE STRUCT (STACK) --- \n");
    Pessoa *pessoa_dinamica = (Pessoa*) malloc(1 * sizeof(Pessoa));
 
    strcpy(pessoa_dinamica->nome, "Ederson");

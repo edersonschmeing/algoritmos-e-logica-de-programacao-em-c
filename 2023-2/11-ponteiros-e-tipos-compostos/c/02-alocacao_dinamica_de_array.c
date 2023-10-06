@@ -37,7 +37,7 @@ int main() {
     int tamanho_vetor = 5;
 
     // alocacao de um vetor estático (memória Stack). 
-    printf(" --- ALOCAÇÃO ESTÁTICA DE VETOR --- \n");
+    printf(" --- ALOCAÇÃO ESTÁTICA DE VETOR (STACK)--- \n");
     
     //int vetor_estatico[tamanho_vetor] = {30, 10, 50, 20, 40}; 
     int vetor_estatico[tamanho_vetor]; 
@@ -49,7 +49,7 @@ int main() {
 
 
     // alocacao de um vetor estático (memória Heap).  
-    printf("\n --- ALOCAÇÃO DINÂMICA DE VETOR --- \n");
+    printf("\n --- ALOCAÇÃO DINÂMICA DE VETOR (HEAP) --- \n");
     int *vetor_dinamico = (int *) malloc(tamanho_vetor * sizeof(int));
     
     preencher_vetor(vetor_dinamico);

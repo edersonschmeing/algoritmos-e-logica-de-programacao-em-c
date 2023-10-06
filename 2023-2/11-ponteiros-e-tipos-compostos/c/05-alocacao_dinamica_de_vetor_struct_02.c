@@ -9,7 +9,7 @@ int main() {
         int idade;
    } Pessoa, *Pessoa_Ptr;  
 
-   printf(" --- ALOCAÇÃO DINÂMICA DE PONTEIRO DE PONTEIRO DE STRUCT--- \n");
+   printf(" --- ALOCAÇÃO DINÂMICA (HEAP) - PONTEIRO DE PONTEIRO DE STRUCT--- \n");
  
 
    //Pessoa *pessoa_dinamica = (Pessoa*) malloc(1 * sizeof(Pessoa*));
@@ -36,7 +36,7 @@ int main() {
 
 
    for (int i = 0; i < 10; i++ ) {
-      printf("&vetor = %p | end struct = %ld | end struct = %p \n", &vetor, &vetor[i], vetor[i]);  
+      printf("&vetor = %p | end struct = %ld | end struct = %p | conteudo = %s  \n", &vetor, &vetor[i], vetor[i], vetor[i]->nome);  
    }
 
    Pessoa *pessoa_0 = vetor[0];
