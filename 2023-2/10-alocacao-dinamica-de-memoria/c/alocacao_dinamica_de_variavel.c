@@ -25,7 +25,7 @@ int main() {
 
     //alocação dinâmica na (memória Heap) com funçõa malloc
     printf(" --- ALOCAÇÃO DINÂMICA USANDO FUNÇÃO (malloc) --- \n");
-    int *b = malloc(1 * sizeof(int)); // malloc não incializa o espaço alocado. Todos os elementos possuem lixo de memória.
+    int *b = malloc(100 * sizeof(int)); // malloc não incializa o espaço alocado. Todos os elementos possuem lixo de memória.
     *b = 20; 
     printf("&b = %p | b = %p | *b = %d \n", &b, b, *b);
     free(b); //desaloca/libera endereço da memória Heap. A função free() informa o sistema operacional que nosso programa não vai mais usar aquele endereço. 
