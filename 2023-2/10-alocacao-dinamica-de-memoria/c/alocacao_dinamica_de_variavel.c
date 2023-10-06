@@ -40,8 +40,9 @@ int main() {
     *c = 50; 
     printf("&c = %p | c = %p | *c = %d \n", &c, c, *c);
     free(c); //desaloca/libera endereço da memória Heap 
-    c = NULL;
+    c = NULL; // boa prática de programação
     printf("&c = %p | c = %p \n\n", &c, c);
     
+
     return 0;
 }
