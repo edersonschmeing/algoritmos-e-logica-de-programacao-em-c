@@ -40,17 +40,14 @@ int main() {
    }
 
    Pessoa *pessoa_0 = vetor[0];
+  // free(pessoa_0);
    Pessoa *pessoa_1 = vetor[1];
    Pessoa *pessoa_2 = vetor[2];
-
-
-
 
  //dessa forma o vetor ta na stack e a struct na heap.
    Pessoa *v[10];
    v[0] = pessoa_dinamica;
    
-
    //DESALOCA MEMORIA
    free(pessoa_dinamica);
    pessoa_dinamica = NULL;

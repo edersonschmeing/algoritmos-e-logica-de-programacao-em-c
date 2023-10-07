@@ -227,6 +227,7 @@ void testar(TADS *tads) {
 
 int main() {
    
+
    TADS tads;
    tads.tamanho = 0;
 

@@ -19,7 +19,7 @@ int main() {
     
     //alocação estática na (memória Stack). 
     printf(" --- ALOCAÇÃO ESTÁTICA (STACK) --- \n");
-    int a = 30; 
+    int a; 
     printf("&a = %p, a = %d \n\n", &a, a);
 
 
@@ -41,7 +41,7 @@ int main() {
     printf("&c = %p | c = %p | *c = %d \n", &c, c, *c);
     free(c); //desaloca/libera endereço da memória Heap 
     c = NULL; // boa prática de programação
-    printf("&c = %p | c = %p \n\n", &c, c);
+ 
     
 
     return 0;
