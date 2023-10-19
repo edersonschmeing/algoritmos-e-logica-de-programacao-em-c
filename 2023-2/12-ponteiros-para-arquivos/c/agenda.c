@@ -8,7 +8,6 @@ int main(void)
     {
         return 1;
     }
-
     char nome[30];
     printf("Nome: ");
     scanf("%s", nome);
@@ -16,7 +15,7 @@ int main(void)
     printf("\nNúmero: ");
     char numero[15];
     scanf("%s", numero);
-     
+
     // Print to file
     fprintf(file, "%s,%s\n", nome, numero);
 
