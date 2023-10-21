@@ -10,7 +10,6 @@ struct array_dinamico {
     int *dados;     // array de int que representa nossos dados. 
 };
 
-
 typedef struct array_dinamico Array_Dinamico;
 
 
@@ -80,7 +79,7 @@ void diminuir_array_dinamico(Array_Dinamico *array_dinamico) {
     }
 }
 
-int busca_binaria_interativa_array_dinamico(int *dados, int quantidade, int valor) {
+int busca_binaria_iterativa_array_dinamico(int *dados, int quantidade, int valor) {
     
     int inicio = 0, fim = quantidade - 1, index_meio;
 
@@ -190,15 +189,35 @@ int quantidade_array_dinamico(const Array_Dinamico *array_dinamico) {
 
 }
 
+void carregar_arquivo_array_dinamico(Array_Dinamico *array_dinamico, char *caminho_arquivo) { 
 
-int main() {
+   //ler o arquivo
+
+}
+
+void gravar_arquivo_array_dinamico(Array_Dinamico *array_dinamico, char *caminho_arquivo) { 
+
+   //se arquivo já existir remove tudo e cria novamente
+   //gravar no arquivo no disco
+
+}
+
+void menu() { 
 
    int tamanho = 4; //vamos começar com um tamanho fixo e depois vamos dobrando o seu tamanho.  
 
    bool ordenado = false; 
   
    Array_Dinamico *array_dinamico = criar_array_dinamico(tamanho, ordenado);
-
+   
+   // implementar 
+   
    destruir_array_dinamico(&array_dinamico);
+
+}
+
+int main(int argc, char *argv[]) {
+
+    menu();
 
 }
