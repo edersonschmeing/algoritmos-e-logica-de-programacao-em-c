@@ -42,7 +42,7 @@ int main() {
     
     ordenar_insertion_sort(vet, 7); 
     
-    printf("\narray ordenado");
+    printf("\narray ordenado\n");
 
     for (int i = 0; i < 7; i++) { 
       printf("%d = %d \n", i, vet[i]);
