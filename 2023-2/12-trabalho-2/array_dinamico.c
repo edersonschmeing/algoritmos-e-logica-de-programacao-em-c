@@ -128,6 +128,19 @@ int busca_sequencial_array_dinamico(Array_Dinamico *array_dinamico, int valor) {
     return -1; //caso não encontre o elemente, retorna -1 com index.
 }
 
+int busca_sequencial_ordenada_array_dinamico(Array_Dinamico *array_dinamico, int valor) {    
+    
+    for (int i = 0; i < array_dinamico->quantidade; i++) {
+        if (array_dinamico->dados[i] == valor){ 
+            return i; //retorna o index do elemento.
+        }else { 
+            if (array_dinamico->dados[i] > valor)
+                return -1; //para a busca
+        } 
+    }    
+    return -1; //caso não encontre o elemente, retorna -1 com index.
+}
+
 void imprimir_array_dinamico(const Array_Dinamico *array_dinamico) {
    
    //Implemente
