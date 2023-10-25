@@ -221,8 +221,6 @@ void gravar_arquivo_array_dinamico(Array_Dinamico *array_dinamico, char *caminho
 
 }
 
-
-
 void menu() { 
 
    int tamanho = 4; //vamos começar com um tamanho fixo e depois vamos dobrando o seu tamanho.  
