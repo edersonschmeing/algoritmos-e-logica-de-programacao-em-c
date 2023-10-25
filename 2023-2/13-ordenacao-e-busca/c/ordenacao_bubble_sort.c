@@ -1,10 +1,10 @@
 #include <stdio.h>
 
 void ordenar_bubble_sort(int *dados, int quantidade){
-    int i, continua, aux;
+    int i, continua, aux, fim = quantidade;
     do{
         continua = 0;
-        for(i = 0; i < quantidade-1; i++){
+        for(i = 0; i < fim - 1; i++){
             if (dados[i] > dados[i+1]){
                 aux = dados[i];
                 dados[i] = dados[i+1];
@@ -12,6 +12,7 @@ void ordenar_bubble_sort(int *dados, int quantidade){
                 continua = 1;
             }
         }
+        fim--;
     }while(continua != 0);
 }
 

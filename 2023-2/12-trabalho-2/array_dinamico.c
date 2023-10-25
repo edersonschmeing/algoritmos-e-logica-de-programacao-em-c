@@ -1,17 +1,23 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>  
+#include <string.h>  
 
+
+struct aluno {
+    int ra;      
+    char nome[50];      
+};
+typedef struct aluno Aluno;
 
 struct array_dinamico {
     bool ordenado;  // true indica que quer manter o array ordenado. 
     int tamanho;    // número máximo de elementos que podemos armazenados no array.
     int quantidade; // quantidade atual de elementos armazenados
-    int *dados;     // array de int que representa nossos dados. 
+    int *dados; // quantidade atual de elementos armazenados
+    Aluno **ptr_dados;     // array de int que representa nossos dados. 
 };
-
 typedef struct array_dinamico Array_Dinamico;
-
 
 Array_Dinamico* criar_array_dinamico(int tamanho_array, bool ordenado) {
 
@@ -19,7 +25,7 @@ Array_Dinamico* criar_array_dinamico(int tamanho_array, bool ordenado) {
     array_dinamico->ordenado = ordenado;
     array_dinamico->quantidade = 0;
     array_dinamico->tamanho = tamanho_array;
-    array_dinamico->dados = (int*) calloc(tamanho_array, sizeof(int));
+    array_dinamico->ptr_dados = (Aluno**) calloc(tamanho_array, sizeof(Aluno**));
     
     return array_dinamico;
 
@@ -215,6 +221,8 @@ void gravar_arquivo_array_dinamico(Array_Dinamico *array_dinamico, char *caminho
 
 }
 
+
+
 void menu() { 
 
    int tamanho = 4; //vamos começar com um tamanho fixo e depois vamos dobrando o seu tamanho.  
@@ -223,8 +231,19 @@ void menu() {
   
    Array_Dinamico *array_dinamico = criar_array_dinamico(tamanho, ordenado);
    
-   // implementar 
+   Aluno *aluno01 = (Aluno*) malloc(1 * sizeof(Aluno*));
+ 
+  
+   aluno01->ra = 88;
+   strcpy(aluno01->nome, "Ederson Schmeing");
    
+   array_dinamico->ptr_dados[0] = aluno01;
+    
+   Aluno *aluno_do_array = array_dinamico->ptr_dados[0]; 
+
+   printf("%d %s\n", aluno01->ra, aluno_do_array->nome ); 
+
+   free(aluno01);
    destruir_array_dinamico(&array_dinamico);
 
 }
