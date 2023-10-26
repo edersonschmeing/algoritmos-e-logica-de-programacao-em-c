@@ -230,16 +230,12 @@ void menu() {
    Array_Dinamico *array_dinamico = criar_array_dinamico(tamanho, ordenado);
    
    Aluno *aluno01 = (Aluno*) malloc(1 * sizeof(Aluno*));
- 
-  
-   aluno01->ra = 88;
-   strcpy(aluno01->nome, "Ederson Schmeing");
-   
-   array_dinamico->ptr_dados[0] = aluno01;
     
-   Aluno *aluno_do_array = array_dinamico->ptr_dados[0]; 
+   void adicionar_array_dinamico(array_dinamico, aluno01);   
+    
+   //Aluno *aluno_do_array = array_dinamico->ptr_dados[0]; 
 
-   printf("%d %s\n", aluno01->ra, aluno_do_array->nome ); 
+   //printf("%d %s\n", aluno01->ra, aluno_do_array->nome ); 
 
    free(aluno01);
    destruir_array_dinamico(&array_dinamico);
