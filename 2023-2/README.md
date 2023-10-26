@@ -23,14 +23,14 @@ Este material apresenta exemplos de códigos fontes da disciplina de Algoritmos 
 
  - [09 - Ponteiros](https://github.com/edersonschmeing/algoritmos-e-logica-de-programacao-em-c/tree/main/2023-2/09-ponteiros)
  - [10 - Alocação dinâmica de memória](https://github.com/edersonschmeing/algoritmos-e-logica-de-programacao-em-c/tree/main/2023-2/10-alocacao-dinamica-de-memoria)
- - [11 - Ponteiros e tipos compostos](https://github.com/edersonschmeing/algoritmos-e-logica-de-programacao-2023-2/tree/main/11-ponteiros-e-tipos-compostos/)
- - [12 - Ponteiros para arquivos](https://github.com/edersonschmeing/algoritmos-e-logica-de-programacao-2023-2/tree/main/12-ponteiros-para-arquivos)
+ - [11 - Ponteiros e tipos compostos](https://github.com/edersonschmeing/algoritmos-e-logica-de-programacao-em-c/tree/main/2023-2/11-ponteiros-e-tipos-compostos/)
+ - [12 - Ponteiros para arquivos](https://github.com/edersonschmeing/algoritmos-e-logica-de-programacao-em-c/tree/main/2023-2/12-ponteiros-para-arquivos)
 
 #### Unidade 04 - Algoritmos
 
  - [13 - Ordenação e busca ](https://github.com/edersonschmeing/algoritmos-e-logica-de-programacao-em-c/tree/main/2023-2/13-ordenacao-e-busca)
  - [14 - Recursão](https://github.com/edersonschmeing/algoritmos-e-logica-de-programacao-em-c/tree/main/2023-2/14-recursao)
- - [15 - Algoritmos recursivos](https://github.com/edersonschmeing/algoritmos-e-logica-de-programacao/tree/main/2023-2/15-algoritmos-recursivos)
+ - [15 - Algoritmos recursivos](https://github.com/edersonschmeing/algoritmos-e-logica-de-programacao-em-c/tree/main/2023-2/15-algoritmos-recursivos)
  - [16 - Notação assintótica](https://github.com/edersonschmeing/algoritmos-e-logica-de-programacao-em-c/tree/main/2023-2/16-notacao-assintotica)
 
 
