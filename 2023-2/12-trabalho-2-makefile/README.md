@@ -37,7 +37,7 @@ Modularização:
 - Arquivo .c: declaração dos novos tipos de dados e implementação das funções.
 
 
-![TAD](https://github.com/edersonschmeing/estrutura-de-dados-em-c-1/blob/main/tad-e-vetor-dinamico/tad.png)
+![TAD](https://github.com/edersonschmeing/algoritmos-e-logica-de-programacao-em-c/blob/main/2023-2/12-trabalho-2-makefile/tad.png)
 
 <!-- ### Padrões Criacionais
 
