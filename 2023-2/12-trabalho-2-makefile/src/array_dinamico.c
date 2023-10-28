@@ -39,6 +39,7 @@ void destruir_array_dinamico(Array_Dinamico **array_dinamico_endereco_de_memoria
     //free(array_dinamico->dados);
     for (int i = 0; i < array_dinamico->quantidade; i++) {
         free(array_dinamico->ptr_dados[0]);
+        array_dinamico->ptr_dados[0] = NULL;
     }   
     free(array_dinamico->ptr_dados);    
     free(array_dinamico);
@@ -168,7 +169,10 @@ void ordenar_array_dinamico(const Array_Dinamico *array_dinamico) {
   
 void adicionar_array_dinamico(Array_Dinamico *array_dinamico, Aluno *aluno) {    
    
-   array_dinamico->ptr_dados[0] = aluno;
+   //aumentar 
+
+   array_dinamico->ptr_dados[array_dinamico->quantidade] = aluno;
+   array_dinamico->quantidade = array_dinamico->quantidade + 1;
    //continue a implementação
 }
 
@@ -182,6 +186,12 @@ int busca_array_dinamico(Array_Dinamico *array_dinamico, int valor) {
 
 void remover_array_dinamico(Array_Dinamico *array_dinamico, int index) { 
    
+   array_dinamico->ptr_dados[index] = array_dinamico->ptr_dados[array_dinamico->quantidade];
+   array_dinamico->ptr_dados[array_dinamico->quantidade] = NULL;
+   array_dinamico->quantidade = array_dinamico->quantidade - 1;
+  
+//   diminuir_array_dinamico
+
    //implemente
    
 }

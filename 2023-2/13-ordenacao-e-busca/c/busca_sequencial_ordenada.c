@@ -1,6 +1,5 @@
 #include <stdio.h>
 
-
 void ordenar_insertion_sort(int *dados, int quantidade){
 
     int i, j, aux;
@@ -11,8 +10,6 @@ void ordenar_insertion_sort(int *dados, int quantidade){
         dados[j] = aux;
     }
 }
-
-
 
 int busca_sequencial_ordenada(int *dados, int quantidade, int valor) {    
     
