@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+
 int fibonacci(int valor){
     if(valor < 2 ){
        return valor;
@@ -7,6 +8,7 @@ int fibonacci(int valor){
        return fibonacci(valor - 1) + fibonacci(valor - 2);
     }
 }
+
 
 int main() {
 /*
