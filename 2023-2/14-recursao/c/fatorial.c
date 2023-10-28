@@ -12,10 +12,9 @@ int fatorial(int valor){
     return resultado;  
 }
 
-// 5 * 4 * 3 * 2 * 1 => 5! é : 120
-
 int main() {
     
+    // 5 * 4 * 3 * 2 * 1 => 5! é : 120
     int valor = 5;
 
     //printf("Informe um valor: ");
