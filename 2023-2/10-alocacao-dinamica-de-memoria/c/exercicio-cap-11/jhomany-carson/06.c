@@ -65,7 +65,7 @@ int main() {
     scanf(" %d", &coluna);
 
 
-    matriz = (int **) malloc(linha * sizeof(int));
+    matriz = (int **) malloc(linha * sizeof(int *));
 
     if (matriz == NULL) {
         
@@ -73,7 +73,7 @@ int main() {
         return 1;
     }
     
-    for (int i = 0; i < coluna; i++) {
+    for (int i = 0; i < linha; i++) {
         
         matriz[i] = (int *) malloc (coluna * sizeof(int));
 
