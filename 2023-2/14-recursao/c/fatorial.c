@@ -14,8 +14,8 @@ int fatorial(int valor){
 
 int main() {
     
-    // 5 * 4 * 3 * 2 * 1 => 5! é : 120
-    int valor = 5;
+    // 4 * 3 * 2 * 1 => 4! é : 24
+    int valor = 4;
 
     //printf("Informe um valor: ");
     //scanf("%d", &valor);
