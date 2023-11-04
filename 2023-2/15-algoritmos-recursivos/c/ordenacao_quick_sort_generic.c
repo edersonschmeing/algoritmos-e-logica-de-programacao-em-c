@@ -76,16 +76,16 @@ struct pessoa {
 };
 typedef struct pessoa Pessoa;   
 
-compare_strucs_pessoa_ra(const void *pessoa1, const void *pessoa2) { 
-   Pessoa p1 =  *(Pessoa *) pessoa1;
-   Pessoa p2 =  *(Pessoa *) pessoa2;  
-   return (p1.ra - p2.ra);
+int compare_strucs_pessoa_ra(const void *pessoa1, const void *pessoa2) { 
+   Pessoa p1 = *(Pessoa*)pessoa1;
+   Pessoa p2 = *(Pessoa*)pessoa2;  
+   return p1.ra - p2.ra;
 }
 
-compare_strucs_pessoa_nome(const void *pessoa1, const void *pessoa2) { 
-   Pessoa p1 =  *(Pessoa *) pessoa1;
-   Pessoa p2 =  *(Pessoa *) pessoa2;  
-   return strcmp((char*) p1.nome, (char*) p2.nome);
+int compare_strucs_pessoa_nome(const void *pessoa1, const void *pessoa2) { 
+   Pessoa p1 = *(Pessoa*)pessoa1;
+   Pessoa p2 = *(Pessoa*)pessoa2;  
+   return strcmp(p1.nome, p2.nome);
 }
 
 
