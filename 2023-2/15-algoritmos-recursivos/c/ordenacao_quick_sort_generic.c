@@ -252,14 +252,23 @@ void teste_struct() {
     }
     printf("\n");
 
-    //quick_sort((void**)pessoas, 0, quantidade - 1, compare_strucs_pessoa_ra); 
     quick_sort((void**)pessoas, 0, quantidade - 1, compare_strucs_pessoa_nome); 
 
-    printf("Ordenado\n");
+    printf("Ordenado por nome\n");
     for(int j = 0; j < quantidade; j++) {
        printf("%d - %s \n", pessoas[j]->ra, pessoas[j]->nome);
     }
-    printf("\n");
+    printf("\n"); 
+
+    //ordenado por ra
+    quick_sort((void**)pessoas, 0, quantidade - 1, compare_strucs_pessoa_ra); 
+    
+    printf("Ordenado por ra\n");
+    for(int j = 0; j < quantidade; j++) {
+       printf("%d - %s \n", pessoas[j]->ra, pessoas[j]->nome);
+    }
+    printf("\n"); 
+
 
     for(int i = 0; i < quantidade; i++)
        free(pessoas[i]);
