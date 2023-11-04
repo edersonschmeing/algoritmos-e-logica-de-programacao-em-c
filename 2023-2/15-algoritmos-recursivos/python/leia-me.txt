@@ -1,1 +1,0 @@
-implementar em python os exemplos desenvolvidos em c 
