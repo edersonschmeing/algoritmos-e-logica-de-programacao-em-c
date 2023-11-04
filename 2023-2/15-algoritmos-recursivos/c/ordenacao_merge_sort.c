@@ -43,7 +43,7 @@ void ordenar_merge_sort(int *dados, int inicio, int fim){
 }
 
 int main() { 
-
+ 
   int array[7] = {23, 4, 67, -8, 54, 80, 21}; 
        
     printf("\narray\n");

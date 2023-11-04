@@ -85,7 +85,7 @@ compare_strucs_pessoa_ra(const void *pessoa1, const void *pessoa2) {
 compare_strucs_pessoa_nome(const void *pessoa1, const void *pessoa2) { 
    Pessoa p1 =  *(Pessoa *) pessoa1;
    Pessoa p2 =  *(Pessoa *) pessoa2;  
-   return strcmp((char*) p1.nome,(char*) p2.nome);
+   return strcmp((char*) p1.nome, (char*) p2.nome);
 }
 
 
@@ -99,7 +99,6 @@ void trocar(void **array, int pos1, int pos2){
 	array[pos2] = temp;
 
 }
-
 
 int particionar(void **array, int p, int r, int (*compare)(const void*, const void*)) { 
 
@@ -116,7 +115,6 @@ int particionar(void **array, int p, int r, int (*compare)(const void*, const vo
 
 	return i + 1;
 }
-
 
 void quick_sort(void **array, int p, int r, int (*compare)(const void*, const void*)){
 
