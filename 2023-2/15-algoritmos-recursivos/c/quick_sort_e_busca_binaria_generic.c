@@ -68,7 +68,8 @@ int compare_dates(const  void * date1,const void * date2){
 	}
 }
 
-//camparadores com variáveeis de uma struct 
+
+//camparadores com variáveis de uma struct 
 
 struct pessoa { 
   int ra;
@@ -76,18 +77,16 @@ struct pessoa {
 };
 typedef struct pessoa Pessoa;   
 
-int compare_strucs_pessoa_ra(const void *pessoa1, const void *pessoa2) { 
-   Pessoa p1 = *(Pessoa*)pessoa1;
-   Pessoa p2 = *(Pessoa*)pessoa2;  
-   return p1.ra - p2.ra;
-}
 
 int compare_strucs_pessoa_nome(const void *pessoa1, const void *pessoa2) { 
-   Pessoa p1 = *(Pessoa*)pessoa1;
-   Pessoa p2 = *(Pessoa*)pessoa2;  
-   return strcmp(p1.nome, p2.nome);
+   
+   return strcmp((*(Pessoa*)pessoa1).nome, (*(Pessoa*)pessoa2).nome);
 }
 
+int compare_strucs_pessoa_ra(const void *pessoa1, const void *pessoa2) { 
+   
+   return (*(Pessoa*)pessoa1).ra - (*(Pessoa*)pessoa2).ra;
+}
 
 //odenação quick sort
 
@@ -126,6 +125,26 @@ void quick_sort(void **array, int p, int r, int (*compare)(const void*, const vo
 }
 
 
+int busca_binaria_recursiva(int **dados, int limite_esquerda, int limite_direita, void *valor, int (*compare)(const void*, const void*)) {    
+    
+    int index_meio = (limite_esquerda + limite_direita) / 2;
+
+    if (limite_esquerda > limite_direita) //caso base 1
+       return -1;
+    
+    if (compare(dados[index_meio], valor) == 0 ) //caso base 2
+       return index_meio; 
+    else if (compare(dados[index_meio], valor) < 0)   
+       return busca_binaria_recursiva(dados, index_meio + 1, limite_direita, valor, compare);
+
+    else 
+       return busca_binaria_recursiva(dados, limite_esquerda, index_meio - 1, valor, compare);
+
+    return -1;
+}
+
+//testes 
+
 void teste_int() { 
     
     int quantidade = 7;
@@ -163,6 +182,11 @@ void teste_int() {
     for(int i = 0; i < quantidade; i++)
         printf("%2d - ", *array[i]);
     printf("\n");
+    
+    int procurado = 67;
+    void *valor = &procurado;
+    int index = busca_binaria_recursiva((void**)array, 0, quantidade - 1, valor, compare_ints);
+    printf("index do valor procurado %d \n", index);
 
     for(int i = 0; i < quantidade; i++)
         free(array[i]);
@@ -191,13 +215,17 @@ void teste_str() {
         printf("%2s - ", array[i]);
     printf("\n");
     
-
     quick_sort((void**)array, 0, quantidade - 1, compare_str);
  
     printf("Ordenado\n");
     for(int i = 0; i < quantidade; i++)
         printf("%2s - ", array[i]);
     printf("\n");
+
+    char procurado[30] = "Borboleta";
+    void *valor = &procurado;
+    int index = busca_binaria_recursiva((void**)array, 0, quantidade - 1, valor, compare_str);
+    printf("index do valor procurado %d \n", index);
 
     for(int i = 0; i < quantidade; i++)
         free(array[i]);
@@ -258,6 +286,11 @@ void teste_struct() {
     for(int j = 0; j < quantidade; j++) {
        printf("%d - %s \n", pessoas[j]->ra, pessoas[j]->nome);
     }
+    
+    char nome_procurado[30] = "Ederson";
+    void *valor = &nome_procurado;
+    int index = busca_binaria_recursiva((void**)pessoas, 0, quantidade - 1, valor, compare_strucs_pessoa_nome);
+    printf("index do valor procurado %d \n", index);
     printf("\n"); 
 
     //ordenado por ra
@@ -267,8 +300,12 @@ void teste_struct() {
     for(int j = 0; j < quantidade; j++) {
        printf("%d - %s \n", pessoas[j]->ra, pessoas[j]->nome);
     }
+    
+    int ra_procurado = 33;
+    void *valor_ra = &ra_procurado;
+    index = busca_binaria_recursiva((void**)pessoas, 0, quantidade - 1, valor_ra, compare_strucs_pessoa_ra);
+    printf("index do valor procurado %d \n", index);
     printf("\n"); 
-
 
     for(int i = 0; i < quantidade; i++)
        free(pessoas[i]);

@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+
 int busca_binaria_recursiva(int *dados, int limite_esquerda, int limite_direita, int valor) {    
     
     int index_meio = (limite_esquerda + limite_direita) / 2;
