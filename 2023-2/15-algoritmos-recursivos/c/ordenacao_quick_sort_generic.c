@@ -68,6 +68,8 @@ int compare_dates(const  void * date1,const void * date2){
 	}
 }
 
+//camparadores com variáveeis de uma struct 
+
 struct pessoa { 
   int ra;
   char nome[30];
@@ -79,6 +81,13 @@ compare_strucs_pessoa_ra(const void *pessoa1, const void *pessoa2) {
    Pessoa p2 =  *(Pessoa *) pessoa2;  
    return (p1.ra - p2.ra);
 }
+
+compare_strucs_pessoa_nome(const void *pessoa1, const void *pessoa2) { 
+   Pessoa p1 =  *(Pessoa *) pessoa1;
+   Pessoa p2 =  *(Pessoa *) pessoa2;  
+   return strcmp((char*) p1.nome,(char*) p2.nome);
+}
+
 
 //odenação quick sort
 
@@ -95,10 +104,10 @@ void trocar(void **array, int pos1, int pos2){
 int particionar(void **array, int p, int r, int (*compare)(const void*, const void*)) { 
 
 	void *value = array[r];	// elemento pivô
-	int i = p-1;
+	int i = p - 1;
 
 	for(int j = p;j < r; j++){		// com este loop, os valores são separados em 2 partições, as maiores e as menores do pivô
-		if(compare(array[j], value) <= 0){
+		if(compare(array[j], value) <= 0) {
 			i = i + 1;
 			trocar(array, i, j);	// alterar as posições dos elementos antes e depois do elemento ordenado
         }
@@ -111,7 +120,7 @@ int particionar(void **array, int p, int r, int (*compare)(const void*, const vo
 
 void quick_sort(void **array, int p, int r, int (*compare)(const void*, const void*)){
 
-	if(p<r){
+	if(p < r){
 		int q = particionar(array, p, r, compare);	/* pivô */
 		quick_sort(array, p, q - 1, compare);
 		quick_sort(array, q + 1, r, compare);
@@ -245,7 +254,8 @@ void teste_struct() {
     }
     printf("\n");
 
-    quick_sort((void**)pessoas, 0, quantidade - 1, compare_strucs_pessoa_ra); 
+    //quick_sort((void**)pessoas, 0, quantidade - 1, compare_strucs_pessoa_ra); 
+    quick_sort((void**)pessoas, 0, quantidade - 1, compare_strucs_pessoa_nome); 
 
     printf("Ordenado\n");
     for(int j = 0; j < quantidade; j++) {
