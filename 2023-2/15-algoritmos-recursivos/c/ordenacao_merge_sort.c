@@ -35,7 +35,7 @@ void merge(int *dados, int inicio, int meio, int fim){
 void ordenar_merge_sort(int *dados, int inicio, int fim){
     int meio;
     if(inicio < fim){
-        meio = floor((inicio + fim) / 2);
+        meio = floor((inicio + fim) / 2); //retorna a parte inteira de um decimal.
         ordenar_merge_sort(dados, inicio, meio);
         ordenar_merge_sort(dados, meio + 1, fim);
         merge(dados, inicio, meio, fim);
