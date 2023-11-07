@@ -122,8 +122,8 @@ int busca_array_dinamico(Array_Dinamico *array_dinamico, int valor) {
 
 void remover_array_dinamico(Array_Dinamico *array_dinamico, int index) { 
    
-   array_dinamico->ptr_dados[index] = array_dinamico->ptr_dados[array_dinamico->quantidade];
-   array_dinamico->ptr_dados[array_dinamico->quantidade] = NULL;
+   array_dinamico->ptr_dados[index] = array_dinamico->ptr_dados[array_dinamico->quantidade - 1];
+   array_dinamico->ptr_dados[array_dinamico->quantidade - 1] = NULL;
    array_dinamico->quantidade = array_dinamico->quantidade - 1;
   
 //   diminuir_array_dinamico
