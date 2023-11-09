@@ -14,8 +14,7 @@ struct array_dinamico {
     bool ordenado;  // true indica que quer manter o array ordenado. 
     int tamanho;    // número máximo de elementos que podemos armazenados no array.
     int quantidade; // quantidade atual de elementos armazenados
-    int *dados; // quantidade atual de elementos armazenados
-    Aluno **ptr_dados;     // array de int que representa nossos dados. 
+    Aluno **dados;     // array de int que representa nossos dados. 
 };
 typedef struct array_dinamico Array_Dinamico;
 
@@ -25,7 +24,7 @@ Array_Dinamico* criar_array_dinamico(int tamanho_array, bool ordenado) {
     array_dinamico->ordenado = ordenado;
     array_dinamico->quantidade = 0;
     array_dinamico->tamanho = tamanho_array;
-    array_dinamico->ptr_dados = (Aluno**) calloc(tamanho_array, sizeof(Aluno**));
+    array_dinamico->dados = (Aluno**) calloc(tamanho_array, sizeof(Aluno**));
     
     return array_dinamico;
 
@@ -34,6 +33,10 @@ Array_Dinamico* criar_array_dinamico(int tamanho_array, bool ordenado) {
 void destruir_array_dinamico(Array_Dinamico **array_dinamico_endereco_de_memoria) {
 
     Array_Dinamico *array_dinamico = *array_dinamico_endereco_de_memoria;
+    for (int i = 0; i < array_dinamico->quantidade; i++) {
+        free(array_dinamico->dados[0]);
+        array_dinamico->dados[0] = NULL;
+    }
     free(array_dinamico->dados);
     free(array_dinamico);
     *array_dinamico_endereco_de_memoria = NULL;
@@ -160,9 +163,13 @@ void ordenar_array_dinamico(const Array_Dinamico *array_dinamico) {
 }
   
   
-void adicionar_array_dinamico(Array_Dinamico *array_dinamico, int valor) {    
+void adicionar_array_dinamico(Array_Dinamico *array_dinamico, Aluno *aluno) {    
    
-   //implemente
+    //aumentar 
+
+   array_dinamico->dados[array_dinamico->quantidade] = aluno;
+   array_dinamico->quantidade = array_dinamico->quantidade + 1;
+   //continue a implementação
 
 }
 
@@ -176,6 +183,12 @@ int busca_array_dinamico(Array_Dinamico *array_dinamico, int valor) {
 
 void remover_array_dinamico(Array_Dinamico *array_dinamico, int index) { 
    
+    
+   array_dinamico->dados[index] = array_dinamico->dados[array_dinamico->quantidade-1];
+   array_dinamico->dados[array_dinamico->quantidade-1] = NULL;
+  
+   //diminuir_array_dinamico
+
    //implemente
    
 }
@@ -228,16 +241,35 @@ void menu() {
    bool ordenado = false; 
   
    Array_Dinamico *array_dinamico = criar_array_dinamico(tamanho, ordenado);
-   
+
+   printf("Adicionar\n"); 
+
    Aluno *aluno01 = (Aluno*) malloc(1 * sizeof(Aluno*));
+   aluno01->ra = 88;
+   strcpy(aluno01->nome, "Ederson Schmeing"); 
     
-   void adicionar_array_dinamico(array_dinamico, aluno01);   
-    
-   //Aluno *aluno_do_array = array_dinamico->ptr_dados[0]; 
+   adicionar_array_dinamico(array_dinamico, aluno01);   
+   
+   Aluno *aluno02 = (Aluno*) malloc(1 * sizeof(Aluno*));
+   aluno02->ra = 99;
+   strcpy(aluno02->nome, "Isabela Schmeing"); 
 
-   //printf("%d %s\n", aluno01->ra, aluno_do_array->nome ); 
+   adicionar_array_dinamico(array_dinamico, aluno02);   
 
-   free(aluno01);
+   Aluno *aluno_do_array01 = array_dinamico->dados[0]; 
+   Aluno *aluno_do_array02 = array_dinamico->dados[1]; 
+
+   printf("%d %s\n", aluno_do_array01->ra, aluno_do_array01->nome); 
+   printf("%d %s\n", aluno_do_array02->ra, aluno_do_array02->nome); 
+
+   printf("\nRemover\n"); 
+ 
+   remover_array_dinamico(array_dinamico, 0);
+   Aluno *aluno_do_array02_removido = array_dinamico->dados[1]; 
+
+   printf("%d %s\n", aluno_do_array01->ra, aluno_do_array01->nome); 
+   printf("%d %s\n", aluno_do_array02_removido->ra, aluno_do_array02_removido->nome); 
+
    destruir_array_dinamico(&array_dinamico);
 
 }
