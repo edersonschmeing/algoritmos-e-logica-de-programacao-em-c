@@ -54,11 +54,11 @@ void aumentar_array_dinamico(Array_Dinamico *array_dinamico) {
     
     //printf("Aumentando 2 vezes o tamanho atual do array( 2 * %d )\n", array_dinamico->tamanho);
 
-    int *temp = array_dinamico->dados; 
+    Aluno **temp = array_dinamico->dados; 
     //array_dinamico->tamanho *= 2;
     array_dinamico->tamanho = array_dinamico->tamanho * 2;
 
-    array_dinamico->dados = (int*)calloc(array_dinamico->tamanho, sizeof(int)); 
+    array_dinamico->dados = (Aluno**)calloc(array_dinamico->tamanho, sizeof(Aluno**)); 
 
     for (int i = 0; i < array_dinamico->tamanho; i++ ) { 
        array_dinamico->dados[i] = temp[i];
@@ -75,11 +75,11 @@ void diminuir_array_dinamico(Array_Dinamico *array_dinamico) {
        
         //printf("Diminuindo o tamanho atual do array pela metade ( %d / 2 )\n", array_dinamico->tamanho); 
  
-        int *temp = array_dinamico->dados; 
+        Aluno **temp = array_dinamico->dados; 
         array_dinamico->tamanho /= 2;
         //array_dinamico->tamanho = array_dinamico->tamanho / 2;
 
-        array_dinamico->dados = (int*)calloc(array_dinamico->tamanho, sizeof(int)); 
+        array_dinamico->dados = (Aluno**)calloc(array_dinamico->tamanho, sizeof(Aluno**)); 
 
         for (int j = 0; j < array_dinamico->quantidade; j++ ) { 
             array_dinamico->dados[j] = temp[j];
