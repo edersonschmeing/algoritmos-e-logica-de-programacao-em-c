@@ -14,7 +14,7 @@ struct array_dinamico {
     bool ordenado;  // true indica que quer manter o array ordenado. 
     int tamanho;    // número máximo de elementos que podemos armazenados no array.
     int quantidade; // quantidade atual de elementos armazenados
-    Aluno **dados;     // array de int que representa nossos dados. 
+    Aluno **dados;     // array de alunos que representa nossos dados. 
 };
 typedef struct array_dinamico Array_Dinamico;
 
