@@ -15,8 +15,7 @@ struct array_dinamico {
     bool ordenado;  // true indica que quer manter o array ordenado. 
     int tamanho;    // número máximo de elementos que podemos armazenados no array.
     int quantidade; // quantidade atual de elementos armazenados
-    int *dados; // quantidade atual de elementos armazenados
-    Aluno **ptr_dados;     // array de int que representa nossos dados. 
+    Aluno **dados;     // array de alunos que representa nossos dados. 
 };
 
 Array_Dinamico* criar_array_dinamico(int tamanho_array, bool ordenado) {
@@ -25,7 +24,7 @@ Array_Dinamico* criar_array_dinamico(int tamanho_array, bool ordenado) {
     array_dinamico->ordenado = ordenado;
     array_dinamico->quantidade = 0;
     array_dinamico->tamanho = tamanho_array;
-    array_dinamico->ptr_dados = (Aluno**) malloc(tamanho_array * sizeof(Aluno**));
+    array_dinamico->dados = (Aluno**) malloc(tamanho_array * sizeof(Aluno**));
     
     return array_dinamico;
 
@@ -36,10 +35,10 @@ void destruir_array_dinamico(Array_Dinamico **array_dinamico_endereco_de_memoria
     Array_Dinamico *array_dinamico = *array_dinamico_endereco_de_memoria;
     //free(array_dinamico->dados);
     for (int i = 0; i < array_dinamico->quantidade; i++) {
-        free(array_dinamico->ptr_dados[0]);
-        array_dinamico->ptr_dados[0] = NULL;
+        free(array_dinamico->dados[0]);
+        array_dinamico->dados[0] = NULL;
     }   
-    free(array_dinamico->ptr_dados);    
+    free(array_dinamico->dados);    
     free(array_dinamico);
     *array_dinamico_endereco_de_memoria = NULL;
 
@@ -56,13 +55,13 @@ void aumentar_array_dinamico(Array_Dinamico *array_dinamico) {
     
     //printf("Aumentando 2 vezes o tamanho atual do array( 2 * %d )\n", array_dinamico->tamanho);
 
-    int *temp = array_dinamico->dados; 
+    Aluno **temp = array_dinamico->dados; 
     //array_dinamico->tamanho *= 2;
     array_dinamico->tamanho = array_dinamico->tamanho * 2;
 
-    array_dinamico->dados = (int*)calloc(array_dinamico->tamanho, sizeof(int)); 
+    array_dinamico->dados = (Aluno**)calloc(array_dinamico->tamanho, sizeof(Aluno**)); 
 
-    for (int i = 0; i < array_dinamico->tamanho; i++ ) { 
+    for (int i = 0; i < array_dinamico->quantidade; i++ ) { 
        array_dinamico->dados[i] = temp[i];
     }
     free(temp);
@@ -77,11 +76,11 @@ void diminuir_array_dinamico(Array_Dinamico *array_dinamico) {
        
         //printf("Diminuindo o tamanho atual do array pela metade ( %d / 2 )\n", array_dinamico->tamanho); 
  
-        int *temp = array_dinamico->dados; 
+        Aluno **temp = array_dinamico->dados; 
         array_dinamico->tamanho /= 2;
         //array_dinamico->tamanho = array_dinamico->tamanho / 2;
 
-        array_dinamico->dados = (int*)calloc(array_dinamico->tamanho, sizeof(int)); 
+        array_dinamico->dados = (Aluno**)calloc(array_dinamico->tamanho, sizeof(Aluno**)); 
 
         for (int j = 0; j < array_dinamico->tamanho; j++ ) { 
             array_dinamico->dados[j] = temp[j];
@@ -107,7 +106,7 @@ void adicionar_array_dinamico(Array_Dinamico *array_dinamico, Aluno *aluno) {
    
    //aumentar 
 
-   array_dinamico->ptr_dados[array_dinamico->quantidade] = aluno;
+   array_dinamico->dados[array_dinamico->quantidade] = aluno;
    array_dinamico->quantidade = array_dinamico->quantidade + 1;
    //continue a implementação
 }
@@ -122,8 +121,8 @@ int busca_array_dinamico(Array_Dinamico *array_dinamico, int valor) {
 
 void remover_array_dinamico(Array_Dinamico *array_dinamico, int index) { 
    
-   array_dinamico->ptr_dados[index] = array_dinamico->ptr_dados[array_dinamico->quantidade - 1];
-   array_dinamico->ptr_dados[array_dinamico->quantidade - 1] = NULL;
+   array_dinamico->dados[index] = array_dinamico->dados[array_dinamico->quantidade - 1];
+   array_dinamico->dados[array_dinamico->quantidade - 1] = NULL;
    array_dinamico->quantidade = array_dinamico->quantidade - 1;
   
 //   diminuir_array_dinamico
@@ -184,7 +183,7 @@ Aluno *criar_aluno(int ra, char *nome) {
 }    
 
 Aluno *buscar_aluno(Array_Dinamico *array_dinamico, int index) { 
-    return array_dinamico->ptr_dados[index];
+    return array_dinamico->dados[index];
 }
 
 void imprime_aluno(Aluno *aluno) { 
