@@ -81,7 +81,7 @@ void diminuir_array_dinamico(Array_Dinamico *array_dinamico) {
 
         array_dinamico->dados = (int*)calloc(array_dinamico->tamanho, sizeof(int)); 
 
-        for (int j = 0; j < array_dinamico->tamanho; j++ ) { 
+        for (int j = 0; j < array_dinamico->quantidade; j++ ) { 
             array_dinamico->dados[j] = temp[j];
         }
         free(temp);
