@@ -1,6 +1,9 @@
 #gera o arquivo compilado app_main.o na pasta obj
 gcc -I include -Wall -Werror -c apps/app_main.c -o obj/app_main.o
 
+#gera o arquivo compilado comparadores.o na pasta obj
+gcc -I include -Wall -Werror -c src/comparadores.c -o obj/comparadores.o
+
 #gera o arquivo compilado ordenacao_array.o na pasta obj
 gcc -I include -Wall -Werror -c src/ordenacao_array.c -o obj/ordenacao_array.o
 
@@ -11,4 +14,4 @@ gcc -I include -Wall -Werror -c src/busca_array.c -o obj/busca_array.o
 gcc -I include -Wall -Werror -c src/array_dinamico.c -o obj/array_dinamico.o
 
 #Faz a linkagem gerando o arquivo executável 
-gcc obj/app_main.o obj/array_dinamico.o obj/busca_array.o ordenacao_array.o -o bin/app_main.out
+gcc obj/app_main.o obj/comparadores.o obj/busca_array.o obj/ordenacao_array.o obj/array_dinamico.o -o bin/app_main_m.out
