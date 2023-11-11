@@ -31,7 +31,7 @@ Array_Dinamico* criar_array_dinamico(int tamanho_array, bool ordenado) {
     array_dinamico->ordenado = ordenado;
     array_dinamico->quantidade = 0;
     array_dinamico->tamanho = tamanho_array;
-    array_dinamico->dados = (Aluno**) calloc(tamanho_array, sizeof(Aluno**));
+    array_dinamico->dados = (Aluno**) calloc(tamanho_array, sizeof(Aluno*));
     
     return array_dinamico;
 
@@ -65,7 +65,7 @@ void aumentar_array_dinamico(Array_Dinamico *array_dinamico) {
     //array_dinamico->tamanho *= 2;
     array_dinamico->tamanho = array_dinamico->tamanho * 2;
 
-    array_dinamico->dados = (Aluno**)calloc(array_dinamico->tamanho, sizeof(Aluno**)); 
+    array_dinamico->dados = (Aluno**)calloc(array_dinamico->tamanho, sizeof(Aluno*)); 
 
     for (int i = 0; i < array_dinamico->tamanho; i++ ) { 
        array_dinamico->dados[i] = temp[i];
@@ -86,7 +86,7 @@ void diminuir_array_dinamico(Array_Dinamico *array_dinamico) {
         array_dinamico->tamanho /= 2;
         //array_dinamico->tamanho = array_dinamico->tamanho / 2;
 
-        array_dinamico->dados = (Aluno**)calloc(array_dinamico->tamanho, sizeof(Aluno**)); 
+        array_dinamico->dados = (Aluno**)calloc(array_dinamico->tamanho, sizeof(Aluno*)); 
 
         for (int j = 0; j < array_dinamico->quantidade; j++ ) { 
             array_dinamico->dados[j] = temp[j];
@@ -253,19 +253,19 @@ void menu() {
 
    printf("Adicionar\n"); 
 
-   Aluno *aluno01 = (Aluno*) malloc(1 * sizeof(Aluno*));
+   Aluno *aluno01 = (Aluno*) malloc(1 * sizeof(Aluno));
    aluno01->ra = 88;
    strcpy(aluno01->nome, "Ederson Schmeing"); 
     
    adicionar_array_dinamico(array_dinamico, aluno01);   
    
-   Aluno *aluno02 = (Aluno*) malloc(1 * sizeof(Aluno*));
+   Aluno *aluno02 = (Aluno*) malloc(1 * sizeof(Aluno));
    aluno02->ra = 99;
    strcpy(aluno02->nome, "Isabela Schmeing"); 
 
    adicionar_array_dinamico(array_dinamico, aluno02);   
  
-   Aluno *aluno03 = (Aluno*) malloc(1 * sizeof(Aluno*));
+   Aluno *aluno03 = (Aluno*) malloc(1 * sizeof(Aluno));
    aluno03->ra = 55;
    strcpy(aluno03->nome, "Anderson Schmeing"); 
    adicionar_array_dinamico(array_dinamico, aluno03);   
