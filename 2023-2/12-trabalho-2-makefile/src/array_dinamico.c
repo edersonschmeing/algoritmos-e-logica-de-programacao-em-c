@@ -3,8 +3,10 @@
 #include <stdbool.h>  
 #include <string.h>  
 
-#include "array_dinamico.h" 
+#include "comparadores.h" 
 #include "busca_array.h" 
+#include "ordenacao_array.h" 
+#include "array_dinamico.h" 
 
 struct aluno {
     int ra;      
@@ -91,16 +93,26 @@ void diminuir_array_dinamico(Array_Dinamico *array_dinamico) {
 
 void imprimir_array_dinamico(const Array_Dinamico *array_dinamico) {
    
+   for (int i = 0; i < array_dinamico->quantidade; i++) {
+      printf("%d %s\n", array_dinamico->dados[i]->ra, array_dinamico->dados[i]->nome); 
+   } 
+   //Implemente
+
    //Implemente
 
 }
 
-void ordenar_array_dinamico(const Array_Dinamico *array_dinamico) {
+void ordenar_ra_array_dinamico(const Array_Dinamico *array_dinamico) {
    
-   //Implemente
+   quick_sort_compare((void**)array_dinamico->dados, 0, array_dinamico->quantidade-1, compare_strucs_aluno_ra); 
 
 }
-  
+
+void ordenar_nome_array_dinamico(const Array_Dinamico *array_dinamico) {
+   
+   quick_sort_compare((void**)array_dinamico->dados, 0, array_dinamico->quantidade-1, compare_strucs_aluno_nome); 
+
+}
   
 void adicionar_array_dinamico(Array_Dinamico *array_dinamico, Aluno *aluno) {    
    
@@ -172,11 +184,13 @@ void gravar_arquivo_array_dinamico(Array_Dinamico *array_dinamico, char *caminho
 
 }
 
+//funções referente aos alunos.
+
 Aluno *criar_aluno(int ra, char *nome) {
     
     Aluno *aluno01 = (Aluno*) malloc(1 * sizeof(Aluno));
 
-    aluno01->ra = 88;
+    aluno01->ra = ra;
     strcpy(aluno01->nome, nome);
    
     return aluno01;
@@ -191,6 +205,14 @@ void imprime_aluno(Aluno *aluno) {
     printf("%d - %s\n", aluno->ra, aluno->nome);
 
 }
+
+char *get_nome_aluno(Aluno *aluno) {
+    return aluno->nome;
+};
+
+int get_ra_aluno(Aluno *aluno) {
+    return aluno->ra;
+};
 
 
   

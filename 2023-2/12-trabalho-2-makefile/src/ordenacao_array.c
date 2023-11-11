@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <math.h>
 
+#include <ordenacao_array.h>
 
 void ordenar_insertion_sort(int *dados, int quantidade){
 
@@ -86,7 +87,7 @@ void ordenar_merge_sort(int *dados, int inicio, int fim){
     }
 }
 
-
+//quick sort
 int particiona(int *dados, int inicio, int final ){
     int esquerda, direita, pivo, aux;
     esquerda = inicio;
@@ -118,4 +119,41 @@ void ordenar_quick_sort(int *dados, int inicio, int fim) {
         ordenar_quick_sort(dados, inicio, pivo - 1);
         ordenar_quick_sort(dados, pivo + 1, fim);
     }
+}
+
+
+
+//quick sort com comparador por parâmetro
+
+void trocar_compare(void **array, int pos1, int pos2){
+
+	void * temp = array[pos1];
+	array[pos1] = array[pos2];
+	array[pos2] = temp;
+
+}
+
+int particionar_compare(void **array, int inicio, int fim, int (*compare)(const void*, const void*)) { 
+
+	void *value = array[fim];	// elemento pivô
+	int i = inicio - 1;
+
+	for(int j = inicio;j < fim; j++){		// com este loop, os valores são separados em 2 partições, as maiores e as menores do pivô
+		if(compare(array[j], value) <= 0) {
+			i = i + 1;
+			trocar_compare(array, i, j);	// alterar as posições dos elementos antes e depois do elemento ordenado
+        }
+	}
+	trocar_compare(array, i + 1, fim);		// mova o elemento inicial para sua posição final
+
+	return i + 1;
+}
+
+void quick_sort_compare(void **array, int inicio, int fim, int (*compare)(const void*, const void*)) {
+
+	if(inicio < fim) {
+		int q = particionar_compare(array, inicio, fim, compare);	/* pivô */
+		quick_sort_compare(array, inicio, q - 1, compare);
+		quick_sort_compare(array, q + 1, fim, compare);
+	}
 }

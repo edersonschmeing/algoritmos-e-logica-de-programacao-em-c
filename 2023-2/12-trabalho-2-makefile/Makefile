@@ -1,7 +1,10 @@
 all: app_main
 
-app_main: app_main.o array_dinamico.o busca_array.o ordenacao_array.o  
-	gcc obj/app_main.o obj/array_dinamico.o obj/busca_array.o obj/ordenacao_array.o -o bin/app_main.out	
+app_main: app_main.o comparadores.o busca_array.o ordenacao_array.o array_dinamico.o  
+	gcc obj/app_main.o obj/comparadores.o obj/busca_array.o obj/ordenacao_array.o obj/array_dinamico.o -o bin/app_main.out	
+
+comparadores.o: src/comparadores.c include/comparadores.h
+	gcc -I include -Wall -Werror -c src/comparadores.c -o obj/comparadores.o
 
 busca_array.o: src/busca_array.c include/busca_array.h
 	gcc -I include -Wall -Werror -c src/busca_array.c -o obj/busca_array.o
