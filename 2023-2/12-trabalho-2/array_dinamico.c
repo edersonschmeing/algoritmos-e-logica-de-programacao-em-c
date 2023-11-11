@@ -3,10 +3,17 @@
 #include <stdbool.h>  
 #include <string.h>  
 
+struct disciplina {
+    float meia;      
+    char nome[50];      
+};
+typedef struct disciplina Disciplina;
+
 
 struct aluno {
     int ra;      
-    char nome[50];      
+    char nome[50];
+    Disciplina disciplinas[5];      
 };
 typedef struct aluno Aluno;
 
@@ -241,6 +248,8 @@ void menu() {
    bool ordenado = false; 
   
    Array_Dinamico *array_dinamico = criar_array_dinamico(tamanho, ordenado);
+   
+   //chamar a função que carrega o arquivo.
 
    printf("Adicionar\n"); 
 
@@ -265,10 +274,13 @@ void menu() {
    printf("\nRemover\n"); 
  
    remover_array_dinamico(array_dinamico, 0);
+   aluno_do_array01 = array_dinamico->dados[0];
    Aluno *aluno_do_array02_removido = array_dinamico->dados[1]; 
 
    printf("%d %s\n", aluno_do_array01->ra, aluno_do_array01->nome); 
    printf("%d %s\n", aluno_do_array02_removido->ra, aluno_do_array02_removido->nome); 
+
+   //grava no arquivo
 
    destruir_array_dinamico(&array_dinamico);
 
