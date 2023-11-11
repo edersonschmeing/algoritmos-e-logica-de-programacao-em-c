@@ -117,7 +117,7 @@ int busca_binaria_iterativa_array_dinamico(int *dados, int quantidade, int valor
 int busca_sequencial_array_dinamico(Array_Dinamico *array_dinamico, int valor) {    
     
     for (int i = 0; i < array_dinamico->quantidade; i++) {
-        if (array_dinamico->dados[i] == valor) 
+        if (array_dinamico->dados[i]->ra == valor) 
             return i; //retorna o index do elemento.
     }    
     return -1; //caso não encontre o elemente, retorna -1 com index.
@@ -126,10 +126,10 @@ int busca_sequencial_array_dinamico(Array_Dinamico *array_dinamico, int valor) {
 int busca_sequencial_ordenada_array_dinamico(Array_Dinamico *array_dinamico, int valor) {    
     
     for (int i = 0; i < array_dinamico->quantidade; i++) {
-        if (array_dinamico->dados[i] == valor){ 
+        if (array_dinamico->dados[i]->ra == valor){ 
             return i; //retorna o index do elemento.
         }else { 
-            if (array_dinamico->dados[i] > valor)
+            if (array_dinamico->dados[i]->ra > valor)
                 return -1; //para a busca
         } 
     }    
@@ -177,10 +177,10 @@ Aluno *buscar_aluno_index_array_dinamico(const Array_Dinamico *array_dinamico, i
 }
 
 void remover_array_dinamico(Array_Dinamico *array_dinamico, int index) { 
-   
-    
+       
    array_dinamico->dados[index] = array_dinamico->dados[array_dinamico->quantidade-1];
    array_dinamico->dados[array_dinamico->quantidade-1] = NULL;
+   array_dinamico->quantidade--;
   
    //diminuir_array_dinamico
 
@@ -277,7 +277,6 @@ void imprimir_menu(Array_Dinamico *array_dinamico) {
 
 }
 
-
 void mostrar_estrutura_menu(Array_Dinamico *array_dinamico) { 
 
    int tamanho = tamanho_array_dinamico(array_dinamico);
@@ -291,7 +290,7 @@ void mostrar_estrutura_menu(Array_Dinamico *array_dinamico) {
 void buscar_menu(Array_Dinamico *array_dinamico) { 
 
      int numero_ra;
-     printf("Informe o RA para busca: ");
+     printf("Informe o RA para buscar: ");
      int numero_parametros = (scanf("%d", &numero_ra)); // retornam o número de conversões realizada com sucesso. 
 
      if (numero_parametros != 1) {
@@ -307,6 +306,21 @@ void buscar_menu(Array_Dinamico *array_dinamico) {
           printf("%d %s\n", aluno->ra, aluno->nome); 
        } 
      }   
+}
+
+void remover_menu(Array_Dinamico *array_dinamico) {
+     
+     int numero_ra;
+     printf("Informe o RA para remover: ");
+     int numero_parametros = (scanf("%d", &numero_ra)); // retornam o número de conversões realizada com sucesso. 
+     
+     int index = busca_array_dinamico(array_dinamico, numero_ra);
+     index = 0; //teste manual 
+     if (index < 0)   
+         printf("Número de RA não econtrado \n");
+     else { 
+         remover_array_dinamico(array_dinamico, index);
+     } 
 }
 
 void teste_menu() {
@@ -378,6 +392,7 @@ void teste_menu() {
       case 2:
          printf("Você escolheu a operação %d\n", operacao);
          //chamar função para remover um aluno da estrutura
+         remover_menu(array_dinamico);
          break;
       case 3:
          printf("Você escolheu a operação %d\n", operacao);
