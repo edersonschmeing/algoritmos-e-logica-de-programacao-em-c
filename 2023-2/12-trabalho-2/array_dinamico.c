@@ -4,7 +4,7 @@
 #include <string.h>  
 
 struct disciplina {
-    float meia;      
+    float media;      
     char nome[50];      
 };
 typedef struct disciplina Disciplina;
@@ -147,6 +147,7 @@ void imprimir_array_dinamico(const Array_Dinamico *array_dinamico) {
 
 void ordenar_array_dinamico(const Array_Dinamico *array_dinamico) {
    
+   //chamar um dos métodos de ordenação que trabalhamos
    //Implemente
 
 }
@@ -158,6 +159,7 @@ void adicionar_array_dinamico(Array_Dinamico *array_dinamico, Aluno *aluno) {
 
    array_dinamico->dados[array_dinamico->quantidade] = aluno;
    array_dinamico->quantidade = array_dinamico->quantidade + 1;
+
    //continue a implementação
 
 }
@@ -171,6 +173,7 @@ int busca_array_dinamico(Array_Dinamico *array_dinamico, int valor) {
 }
 
 Aluno *buscar_aluno_index_array_dinamico(const Array_Dinamico *array_dinamico, int index) { 
+    
     //validar index
     return array_dinamico->dados[index];
 
@@ -276,7 +279,7 @@ void adicinar_alunos_teste(Array_Dinamico *array_dinamico) {
 
 void imprimir_menu(Array_Dinamico *array_dinamico) { 
 
-  imprimir_array_dinamico(array_dinamico);
+   imprimir_array_dinamico(array_dinamico);
 
 }
 
