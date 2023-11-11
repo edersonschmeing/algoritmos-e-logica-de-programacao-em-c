@@ -379,8 +379,8 @@ void teste_menu() {
          break;
       case 4:
          printf("Você escolheu a operação %d\n", operacao);
-         //chamar função
-         //imprimir(tads);
+         //chamar função imprimir alunos
+         imprimir_array_dinamico(array_dinamico);
          break;
       case 5:
          printf("Você escolheu a operação %d\n", operacao);
