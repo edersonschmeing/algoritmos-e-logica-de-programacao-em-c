@@ -274,7 +274,7 @@ void adicinar_alunos_teste(Array_Dinamico *array_dinamico) {
 void imprimir_menu(Array_Dinamico *array_dinamico) { 
 
   imprimir_array_dinamico(array_dinamico);
-  
+
 }
 
 
@@ -296,12 +296,12 @@ void buscar_menu(Array_Dinamico *array_dinamico) {
 
      if (numero_parametros != 1) {
          printf("Problemas na entrada de dados \n");
-         printf("Informe uma OPERAÇÃO válida \n");    
+         printf("Informe um RA válido \n");    
      } else { 
 
        int index = busca_array_dinamico(array_dinamico, numero_ra);
        if (index < 0)   
-         printf("Número de ra não econtrado \n");
+         printf("Número de RA não econtrado \n");
        else { 
           Aluno *aluno = buscar_aluno_index_array_dinamico(array_dinamico, index);
           printf("%d %s\n", aluno->ra, aluno->nome); 
