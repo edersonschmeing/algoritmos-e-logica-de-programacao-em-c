@@ -227,7 +227,10 @@ void gravar_arquivo_array_dinamico(Array_Dinamico *array_dinamico, char *caminho
 
 }
 
-//funções chamadas pelo menu
+
+//funções chamadas pelo menu, elas são relacionadas a interface 
+//a ideia é não misturar as regras do array_dinamico com 
+//a aplicação que utiliza a biblieta.
 
 void adicinar_alunos_teste(Array_Dinamico *array_dinamico) { 
 
