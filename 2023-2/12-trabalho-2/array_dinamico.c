@@ -293,7 +293,7 @@ void buscar_menu(Array_Dinamico *array_dinamico) {
      } else { 
 
        int index = busca_array_dinamico(array_dinamico, numero_ra);
-       if (index == -1)   
+       if (index < 0)   
          printf("Número de ra não econtrado \n");
        else { 
           Aluno *aluno = buscar_aluno_index_array_dinamico(array_dinamico, index);
