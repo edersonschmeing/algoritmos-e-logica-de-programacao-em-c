@@ -264,6 +264,11 @@ void menu() {
    strcpy(aluno02->nome, "Isabela Schmeing"); 
 
    adicionar_array_dinamico(array_dinamico, aluno02);   
+ 
+   Aluno *aluno03 = (Aluno*) malloc(1 * sizeof(Aluno*));
+   aluno03->ra = 55;
+   strcpy(aluno03->nome, "Anderson Schmeing"); 
+   adicionar_array_dinamico(array_dinamico, aluno03);   
 
    Aluno *aluno_do_array01 = array_dinamico->dados[0]; 
    Aluno *aluno_do_array02 = array_dinamico->dados[1]; 
