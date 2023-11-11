@@ -174,7 +174,7 @@ void gravar_arquivo_array_dinamico(Array_Dinamico *array_dinamico, char *caminho
 
 Aluno *criar_aluno(int ra, char *nome) {
     
-    Aluno *aluno01 = (Aluno*) malloc(1 * sizeof(Aluno*));
+    Aluno *aluno01 = (Aluno*) malloc(1 * sizeof(Aluno));
 
     aluno01->ra = 88;
     strcpy(aluno01->nome, nome);
