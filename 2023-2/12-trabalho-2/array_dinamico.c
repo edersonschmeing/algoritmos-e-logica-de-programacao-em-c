@@ -271,6 +271,13 @@ void adicinar_alunos_teste(Array_Dinamico *array_dinamico) {
 
 }
 
+void imprimir_menu(Array_Dinamico *array_dinamico) { 
+
+  imprimir_array_dinamico(array_dinamico);
+  
+}
+
+
 void mostrar_estrutura_menu(Array_Dinamico *array_dinamico) { 
 
    int tamanho = tamanho_array_dinamico(array_dinamico);
@@ -380,7 +387,7 @@ void teste_menu() {
       case 4:
          printf("Você escolheu a operação %d\n", operacao);
          //chamar função imprimir alunos
-         imprimir_array_dinamico(array_dinamico);
+         imprimir_menu(array_dinamico);
          break;
       case 5:
          printf("Você escolheu a operação %d\n", operacao);
