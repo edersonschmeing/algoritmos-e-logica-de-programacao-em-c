@@ -114,27 +114,6 @@ int busca_binaria_iterativa_array_dinamico(int *dados, int quantidade, int valor
     return -1;
 }    
 
-int busca_binaria_recursiva_array_dinamico(int *dados, int limite_esquerda, int limite_direita, int valor) {    
-    
-    int index_meio = (limite_esquerda + limite_direita) / 2;
-
-    printf("%d\n", index_meio);
-
-    if (limite_esquerda > limite_direita) //caso base 1
-       return -1;
-    
-    if (dados[index_meio] == valor) //caso base 2
-       return index_meio; 
-
-    else if (dados[index_meio] < valor)   
-       return busca_binaria_recursiva_array_dinamico(dados, index_meio + 1, limite_direita, valor);
-
-    else 
-       return busca_binaria_recursiva_array_dinamico(dados, limite_esquerda, index_meio - 1, valor);
-
-    return -1;
-}
-
 int busca_sequencial_array_dinamico(Array_Dinamico *array_dinamico, int valor) {    
     
     for (int i = 0; i < array_dinamico->quantidade; i++) {
@@ -158,7 +137,10 @@ int busca_sequencial_ordenada_array_dinamico(Array_Dinamico *array_dinamico, int
 }
 
 void imprimir_array_dinamico(const Array_Dinamico *array_dinamico) {
-   
+      
+   for (int i = 0; i < array_dinamico->quantidade; i++) {
+      printf("%d %s\n", array_dinamico->dados[i]->ra, array_dinamico->dados[i]->nome); 
+   } 
    //Implemente
 
 }
@@ -186,6 +168,12 @@ int busca_array_dinamico(Array_Dinamico *array_dinamico, int valor) {
     //implemente
 
     return 0;
+}
+
+Aluno *buscar_aluno_index_array_dinamico(const Array_Dinamico *array_dinamico, int index) { 
+    //validar index
+    return array_dinamico->dados[index];
+
 }
 
 void remover_array_dinamico(Array_Dinamico *array_dinamico, int index) { 
@@ -217,15 +205,13 @@ int acessar_verificado_array_dinamico(const Array_Dinamico *array_dinamico, int 
 
 int tamanho_array_dinamico(const Array_Dinamico *array_dinamico) {
     
-    // implemente
-    return 0;
+    return array_dinamico->tamanho;
 
 }
 
 int quantidade_array_dinamico(const Array_Dinamico *array_dinamico) {
  
-    return 0;
-
+    return array_dinamico->quantidade;
 }
 
 void carregar_arquivo_array_dinamico(Array_Dinamico *array_dinamico, char *caminho_arquivo) { 
@@ -241,14 +227,10 @@ void gravar_arquivo_array_dinamico(Array_Dinamico *array_dinamico, char *caminho
 
 }
 
-void menu() { 
+//funções chamadas pelo menu
 
-   int tamanho = 4; //vamos começar com um tamanho fixo e depois vamos dobrando o seu tamanho.  
+void adicinar_alunos_teste(Array_Dinamico *array_dinamico) { 
 
-   bool ordenado = false; 
-  
-   Array_Dinamico *array_dinamico = criar_array_dinamico(tamanho, ordenado);
-   
    //chamar a função que carrega o arquivo.
 
    printf("Adicionar\n"); 
@@ -276,23 +258,151 @@ void menu() {
    printf("%d %s\n", aluno_do_array01->ra, aluno_do_array01->nome); 
    printf("%d %s\n", aluno_do_array02->ra, aluno_do_array02->nome); 
 
-   printf("\nRemover\n"); 
+   // printf("\nRemover\n"); 
  
-   remover_array_dinamico(array_dinamico, 0);
-   aluno_do_array01 = array_dinamico->dados[0];
-   Aluno *aluno_do_array02_removido = array_dinamico->dados[1]; 
+   //remover_array_dinamico(array_dinamico, 0);
+   //aluno_do_array01 = array_dinamico->dados[0];
+   //Aluno *aluno_do_array02_removido = array_dinamico->dados[1]; 
 
-   printf("%d %s\n", aluno_do_array01->ra, aluno_do_array01->nome); 
-   printf("%d %s\n", aluno_do_array02_removido->ra, aluno_do_array02_removido->nome); 
+   //printf("%d %s\n", aluno_do_array01->ra, aluno_do_array01->nome); 
+   //printf("%d %s\n", aluno_do_array02_removido->ra, aluno_do_array02_removido->nome); 
 
-   //grava no arquivo
+   //destruir_array_dinamico(&array_dinamico);
 
-   destruir_array_dinamico(&array_dinamico);
+}
 
+void mostrar_estrutura_menu(Array_Dinamico *array_dinamico) { 
+
+   int tamanho = tamanho_array_dinamico(array_dinamico);
+   int quantidade = quantidade_array_dinamico(array_dinamico);
+   printf("Estrutura \n");
+   printf("Tamanho: %d \n", tamanho);
+   printf("Quantidade: %d \n", quantidade);
+
+}
+
+void buscar_menu(Array_Dinamico *array_dinamico) { 
+
+     int numero_ra;
+     printf("Informe o RA para busca: ");
+     int numero_parametros = (scanf("%d", &numero_ra)); // retornam o número de conversões realizada com sucesso. 
+
+     if (numero_parametros != 1) {
+         printf("Problemas na entrada de dados \n");
+         printf("Informe uma OPERAÇÃO válida \n");    
+     } else { 
+
+       int index = busca_array_dinamico(array_dinamico, numero_ra);
+       if (index == -1)   
+         printf("Número de ra não econtrado \n");
+       else { 
+          Aluno *aluno = buscar_aluno_index_array_dinamico(array_dinamico, index);
+          printf("%d %s\n", aluno->ra, aluno->nome); 
+       } 
+     }   
+}
+
+void teste_menu() {
+
+/* para colocar cor no console 
+   #include <conio.h> usar no windows 
+    
+    \e[1;31m
+    \033[1;31m
+    \033[1;0m 
+
+    Black: 30
+    Red: 31
+    Green: 32
+    Yellow: 33
+    Blue: 34
+    Magenta: 35
+    Cyan: 36
+    White: 37
+    Reset: 0
+*/
+
+   char cor_vermelha[10]= "\033[1;31m";
+   char cor_azul[10] = "\033[1;34m";
+   char cor_verde[10] = "\033[1;32m";
+   char reset_cor[10] = "\033[1;0m";
+
+   printf("\n--- CONSTRUIR UM MENU COM AS OPERAÇÕES ---\n\n");
+  
+   int tamanho = 4; //vamos começar com um tamanho fixo e depois vamos dobrando o seu tamanho.  
+
+   bool ordenado = false; 
+  
+   Array_Dinamico *array_dinamico = criar_array_dinamico(tamanho, ordenado);
+   
+   adicinar_alunos_teste(array_dinamico);
+
+   int operacao = 1;
+  
+   while (operacao < 7 && operacao > 0) {
+      
+      printf("%s---------------------------------------%s\n", cor_azul, cor_azul);
+      printf("-   GERENCIAR ALUNOS - OPERAÇÕES      -\n");
+      printf("---------------------------------------\n");
+      printf("%s1 - Adiciona%s                          -\n", cor_verde, cor_verde);
+      printf("%s2 - Remove%s                            -\n", cor_verde, cor_verde);
+      printf("%s3 - Busca%s                             -\n", cor_verde, cor_verde);
+      printf("%s4 - Lista%s                             -\n", cor_verde, cor_verde);
+      printf("%s5 - Relatório%s                         -\n", cor_verde, cor_verde);
+      printf("%s6 - Estrutura%s                         - \n", cor_verde, cor_verde);     
+      printf("%s7 - Sair %s                             -\n", cor_vermelha, cor_vermelha);
+      printf("---------------------------------------\n");
+      printf("%sEscolha uma operação: %s%s", cor_azul, cor_azul, reset_cor);
+
+      int numero_parametros = (scanf("%d", &operacao)); // retornam o número de conversões realizada com sucesso. 
+
+      if (numero_parametros != 1) {
+         printf("Problemas na entrada de dados \n");
+         printf("Informe uma OPERAÇÃO válida \n");    
+         getchar(); //limpa a entrada da nova linha  
+         continue;
+      }   
+      
+      switch (operacao)       {
+      case 1:
+         printf("Você escolheu a operação %d\n", operacao); 
+         //chamar função para adicionar um novo aluno no estrutura
+         break;
+      case 2:
+         printf("Você escolheu a operação %d\n", operacao);
+         //chamar função para remover um aluno da estrutura
+         break;
+      case 3:
+         printf("Você escolheu a operação %d\n", operacao);
+         //chamar função de buscar
+         buscar_menu(array_dinamico);
+         break;
+      case 4:
+         printf("Você escolheu a operação %d\n", operacao);
+         //chamar função
+         //imprimir(tads);
+         break;
+      case 5:
+         printf("Você escolheu a operação %d\n", operacao);
+         //chamar função
+         break;   
+      case 6:
+         printf("Você escolheu a operação %d\n", operacao);
+         mostrar_estrutura_menu(array_dinamico);
+         break;   
+      case 7:
+         printf("Você escolheu sair do menu. Operação %d\n", operacao);
+         //chamar função
+         break;   
+      default:
+         printf("Você escolheu opção default. Operação %d\n", operacao);
+         break; 
+      }         
+   }
 }
 
 int main(int argc, char *argv[]) {
 
-    menu();
-
+     teste_menu();
+ 
 }
