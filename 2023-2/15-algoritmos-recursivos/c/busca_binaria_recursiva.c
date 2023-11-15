@@ -5,9 +5,9 @@ int busca_binaria_recursiva(int *dados, int limite_esquerda, int limite_direita,
     
     int index_meio = (limite_esquerda + limite_direita) / 2;
 
-    printf("index do meio %d\n\n", index_meio);
+   // printf("index do meio %d\n\n", index_meio);
 
-    if (limite_esquerda > limite_direita) //caso base 1
+   if (limite_esquerda > limite_direita) //caso base 1
        return -1;
     
     if (dados[index_meio] == valor) //caso base 2
