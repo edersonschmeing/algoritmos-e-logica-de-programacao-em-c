@@ -13,19 +13,21 @@ void ordenar_insertion_sort(int *dados, int quantidade){
 
 int busca_binaria_iterativa(int *dados, int quantidade, int valor) {
     
-    int inicio = 0, fim = quantidade - 1, index_meio;
+    int limite_esquerda = 0; 
+    int limite_direita = quantidade - 1;
+    int index_meio = 0;
 
-    while (inicio <= fim) { // enquanto o vetor tiver pelo menos 1 elemento.
+    while (limite_esquerda <= limite_direita) { // enquanto o vetor tiver pelo menos 1 elemento.
 
-        index_meio = (inicio + fim) / 2;
+        index_meio = (limite_esquerda + limite_direita) / 2;
         if (dados[index_meio] == valor) 
            return index_meio;
         
         else if (dados[index_meio] > valor)
-            fim = index_meio - 1;
+            limite_direita = index_meio - 1;
         
         else 
-            inicio = index_meio + 1;
+            limite_esquerda = index_meio + 1;
     } 
     return -1;
 }    
