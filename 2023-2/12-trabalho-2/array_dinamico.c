@@ -33,7 +33,7 @@ Array_Dinamico* criar_array_dinamico(int tamanho_array, bool ordenado) {
     array_dinamico->tamanho = tamanho_array;
     array_dinamico->dados = (Aluno**) calloc(tamanho_array, sizeof(Aluno*));
     
-    return array_dinamico;
+    return array_dinamico; 
 
 }
 
@@ -427,6 +427,7 @@ void teste_menu() {
          break; 
       }         
    }
+   destruir_array_dinamico(&array_dinamico);
 }
 
 int main(int argc, char *argv[]) {
