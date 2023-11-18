@@ -1,14 +1,3 @@
-## Estrutura de Dados
-
-Estrutura de Dados é a forma de armazenar e organizar os dados na memoria de um computador de modo que possam ser usados de forma eficiente. Elas podem ser
-homogêneas ou heterogêneas.
-
-As homogêneas são conjuntos formados por dados do mesmo tipos: Vetores, Matrizes e Strings.
-
-As heterogêneas são conjuntos formados por tipos de dados diferentes: Registros (Structs).
-
----
-
 ## TAD - Tipo Abstrato de Dados
 
 Um Tipo Abstrato de Dados, ou TAD, é um conjunto de dados estruturados e as operações que podem ser executadas sobre esses dados.
@@ -38,7 +27,3 @@ Modularização:
 
 
 ![TAD](https://github.com/edersonschmeing/algoritmos-e-logica-de-programacao-em-c/blob/main/2023-2/12-trabalho-2-makefile/tad.png)
-
-<!-- ### Padrões Criacionais
-
-#### - Factory Method -->
