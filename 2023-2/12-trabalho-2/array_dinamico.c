@@ -217,17 +217,41 @@ int quantidade_array_dinamico(const Array_Dinamico *array_dinamico) {
     return array_dinamico->quantidade;
 }
 
-void carregar_arquivo_array_dinamico(Array_Dinamico *array_dinamico, char *caminho_arquivo) { 
+int carregar_arquivo_array_dinamico(Array_Dinamico *array_dinamico, char *caminho_arquivo) { 
 
-   //ler o arquivo
-
+   FILE *arquivo;
+   arquivo = fopen(caminho_arquivo,"rb");
+   if (!arquivo) { 
+         printf("Erro ao abrir o arquivo!");     
+         return 1;
+   }
+   int i = 0;
+   while (1) { 
+      if (feof(arquivo))
+         break;  
+      Aluno *aluno = (Aluno*) malloc(1 * sizeof(Aluno));    
+      fread(aluno, sizeof(Aluno), 1 , arquivo);
+      adicionar_array_dinamico(array_dinamico, aluno);
+      i++;
+   }  
+   fclose(arquivo);
+   return 0;
 }
 
-void gravar_arquivo_array_dinamico(Array_Dinamico *array_dinamico, char *caminho_arquivo) { 
+int gravar_arquivo_array_dinamico(Array_Dinamico *array_dinamico, char *caminho_arquivo) { 
 
-   //se arquivo já existir remove tudo e cria novamente
-   //gravar no arquivo no disco
-
+    FILE *arquivo;
+    arquivo = fopen(caminho_arquivo,"wb");
+    if (!arquivo) { 
+      printf("Erro ao abrir o arquivo!");     
+      return 1;
+    }
+    int i;
+    for ( i=1; i < array_dinamico->quantidade; i++) { 
+       fwrite(array_dinamico->dados[i], sizeof(Aluno), 1, arquivo);
+  }
+  fclose(arquivo);
+  return 0;
 }
 
 
