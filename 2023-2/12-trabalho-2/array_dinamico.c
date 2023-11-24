@@ -225,14 +225,12 @@ int carregar_arquivo_array_dinamico(Array_Dinamico *array_dinamico, char *caminh
          printf("Erro ao abrir o arquivo!");     
          return 1;
    }
-   int i = 0;
    while (1) { 
       if (feof(arquivo))
          break;  
       Aluno *aluno = (Aluno*) malloc(1 * sizeof(Aluno));    
       fread(aluno, sizeof(Aluno), 1 , arquivo);
       adicionar_array_dinamico(array_dinamico, aluno);
-      i++;
    }  
    fclose(arquivo);
    return 0;
