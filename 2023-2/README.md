@@ -42,8 +42,9 @@ CORMEN, T. H. et.al. Algoritmos: teoria e prática, 3 edição. Ed. Rio de Janei
 
 BACKES, A. Algoritmos e Estruturas de Dados em Linguagem C. 1. Ed. - Rio de Janeiro: LTC, 2023.
 
-FORBELLONE, A. L. V.; EBERSPACHER, H. F. Lógica de programação: a construção de algoritmos e estruturas de dados
+<!-- FORBELLONE, A. L. V.; EBERSPACHER, H. F. Lógica de programação: a construção de algoritmos e estruturas de dados
 com aplicações em Python. 4. Ed. Pearson GrupoA, 2022.
+-->
 
 Programação Descomplicada
 https://www.andrebackes.com/
@@ -51,11 +52,12 @@ https://www.andrebackes.com/
 C Programming Language.
 https://devdocs.io/c/.
 
-Python Programming Language.
-https://www.python.org/
-
 C Tutorial. W3Schools.
 https://www.w3schools.com/c/index.php
 
+<!-- Python Programming Language.
+https://www.python.org/
+
 Python Tutorial. W3Schools.
 https://www.w3schools.com/python/default.asp
+-->
