@@ -153,7 +153,7 @@ void ordenar_array_dinamico(const Array_Dinamico *array_dinamico) {
 }
   
   
-void adicionar_array_dinamico(Array_Dinamico *array_dinamico, Aluno aluno) {    
+void adicionar_array_dinamico(Array_Dinamico *array_dinamico, Aluno* aluno) {    
    
     //aumentar 
 
